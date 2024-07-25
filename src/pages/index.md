@@ -2,25 +2,24 @@
 tag: ""
 title: "Shanghai Bun Dynasty 外滩十八号 - Best Food Today"
 description: ""
-favicon: "logo.svg"
-logo: "logo.svg"
-logoColor: "#DF733C"
+favicon: "logo.webp"
+logo: "logo.webp"
+logoColor: "#000000" # use for theme color
 logoColorScheme: "dark" # dark | light
-logoSize: 36 
-onlineOrderLink: 'https://www.bestfoodtodayus.com/ordering/?restaurant_uid=d8be6ebc-d040-43fb-b8dc-af0c7746f41b
-13m'
+logoSize: 55
+onlineOrderLink: "https://www.bestfoodtodayus.com/ordering/?restaurant_uid=d8be6ebc-d040-43fb-b8dc-af0c7746f41b"
 tableReservationLink: ""
 tel: "408-255-1288"
-telTextColor: "#ffffff"
+telTextColor: "#000000"
 
 header:
   textAfterLogo: 
-    text: "Shanghai Bun Dynasty 外滩十八号 - Best Food Today"
+    text: ""
     size: 16
-    color: "#ffffff"
-  bgColor: "#333333"
-  bgOpacity: "0.9" # 0~1
-  menuTextColor: "#ffffff"
+    color: ""
+  bgColor: "#ffffff"
+  bgOpacity: "0.75" # 0~1
+  menuTextColor: "#000000"
   menu:
     - { text: 'Home', link: '/' }
     - { text: 'Gallery', link: '/gallery' }
@@ -28,14 +27,14 @@ header:
 sections:
 # Hero
   - type: "hero" 
-    height: "80" # percent of the viewport height
+    height: "90" # percent of the viewport height
     sectionType: "video" # video | imgWithText | imgBg
     bgVideoType: "vimeo" # youtube | vimeo | GJW
-    bgVideoId: "869243893"
+    bgVideoId: "738770507"
     bgImg: "shanghai-bun-dynasty.webp"
     bgImgAlt: "Shanghai Bun Dynasty 外滩十八号 - Best Food Today"
-    bgColor: "#152039"
-    bgOpacity: "0" # 0~1
+    bgColor: "#000000"
+    bgOpacity: "0.6" # 0~1
     title: "Shanghai Bun Dynasty<br/>外滩十八号"
     titleColor: "#ffffff"
     description: "Those classic Shanghai local dishes and the diverse variety of alley snacks are favored by people of all ethnic groups, and they can always be passed down continuously."
@@ -65,15 +64,15 @@ sections:
     imgNameColor: "#000000"
     menuItemImgRounded: "lg" # sm | md | lg | xl | 2xl | 3xl | full
 
-# # textBlock - About Us
-#   - type: "textBlock" 
-#     title: 'About Imperial Soup 皇帝湯 - Best Food Today'
-#     titleColor: "#000000"
-#     description: 
-#       - text: 'Imperial Soup is a one of a kind restaurant in Oakland selling authentic specialty steamed soups.'
-#       - text: "Our soups don't only taste amazing, they also have medicinal value. Depending on the current season, we have a selection of soups to meet different aspects in improving your health."
-#       - text: "We serve Imperial Soup dishes plus other Asian dishes. Feel free to message us about inquiries! We'll get back to you as soon as we can!"
-#     descriptionColor: "#000000"
+# textBlock - About Us
+  - type: "textBlock" 
+    title: 'About Us'
+    titleColor: "#000000"
+    description: 
+      - text: "Welcome to Food At Shanghai Bun Dynasty 外滩十八号! At our restaurant, we are dedicated to offering an exceptional dining experience with a focus on health, freshness, and natural flavors. Our signature dishes feature the finest in Chinese cuisine, prepared with the utmost care and attention to detail. "
+      - text: "Come and savor the delightful and nutritious flavors we have to offer, tailored to meet the needs and preferences of our modern diners."
+      # - text: "We serve Imperial Soup dishes plus other Asian dishes. Feel free to message us about inquiries! We'll get back to you as soon as we can!"
+    descriptionColor: "#000000"
 
 # # feature 2
 #   - type: "feature" 
@@ -152,8 +151,8 @@ sections:
 # map  
   - type: "map"
     mode: "fullWidth" # full-width | ...
-    url: "https://maps.app.goo.gl/m6NuBSMov6PZuGVn9"
-    iframeUrl: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12613.731331832716!2d-122.4934598!3d37.779895!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808587633b67090b%3A0x9d63275356723aab!2sAnAn&#39;s%20Deli%20Kitchen!5e0!3m2!1sja!2sus!4v1721824586731!5m2!1sja!2sus"
+    url: "https://maps.app.goo.gl/sGRWDcJekoVwS7ET8"
+    iframeUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3172.8496107568026!2d-122.0202152240354!3d37.322389872102924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb5bc9bf3a785%3A0x1986586558b9d981!2sShanghai%20No.1!5e0!3m2!1sen!2sus!4v1721888062721!5m2!1sen!2sus"
  
   # - type: "modal"
   #   bgColor: "#333"
@@ -175,7 +174,8 @@ footer:
   bgColor: "#152039"
   bgOpacity: "0.8" # 0~1
   openingHours: 
-  
+    - "Mon - Fri 10:00 AM - 2:30 PM 4:30 PM - 9:00 PM"
+    - "Sat - Sun 10:00 AM - 9:00 PM"
 
   menu:
     - { text: 'Home', link: '/' }
@@ -191,7 +191,7 @@ footer:
   youtubeLink: ""
   yelp: false
   yelpLink: ""
-  # paymentMethod: "cash,visa" 
+  paymentMethod: "" 
   #alipay,applePay,cash,discover,googlePay,jcb,maestro,mastercard,stripe,unionPay,visa,weChatPay,payPal 
 
 
