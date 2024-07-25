@@ -49,7 +49,7 @@ const basePath = import.meta.env.VITE_BASE_URL || "";
               <Fragment key={index}>
                 <li>
                   <img
-                    src={basePath + item.src.replace("/public", "")}
+                    src={item.src.replace("/public", "")}
                     alt={item.name}
                     class={`mx-auto h-56 w-56 rounded-${section.menuItemImgRounded} hover:scale-105 duration-300`}
                   />
@@ -104,7 +104,7 @@ const basePath = import.meta.env.VITE_BASE_URL || "";
               <Fragment key={index}>
                 <li class="rounded-2xl bg-gray-800 px-8 py-10">
                   <img
-                    src={basePath + item.src.replace("/public", "")}
+                    src={item.src.replace("/public", "")}
                     alt={item.name}
                     class={`mx-auto h-48 w-48 md:h-56 md:w-56 rounded-full object-cover hover:scale-105 duration-300`}
                   />
@@ -156,7 +156,7 @@ const basePath = import.meta.env.VITE_BASE_URL || "";
               <Fragment key={index}>
                 <li>
                   <img
-                    src={basePath + item.src.replace("/public", "")}
+                    src={item.src.replace("/public", "")}
                     alt={item.name}
                     class={`aspect-[14/13] w-full rounded-2xl object-cover rounded-${section.menuItemImgRounded} hover:scale-105 duration-300`}
                   />

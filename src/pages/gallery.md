@@ -34,9 +34,9 @@ sections:
     bgImgAlt: "Shanghai Bun Dynasty 外滩十八号 - Best Food Today"
     bgColor: "#000000"
     bgOpacity: "0.6" # 0~1
-    title: "Shanghai Bun Dynasty<br/>外滩十八号"
+    title: "Gallery"
     titleColor: "#ffffff"
-    description: "Those classic Shanghai local dishes and the diverse variety of alley snacks are favored by people of all ethnic groups, and they can always be passed down continuously."
+    description: "Come and savor the delightful and nutritious flavors we have to offer, tailored to meet the needs and preferences of our diners."
     descriptionColor: "#ffffff"
     imgName: "Shanghai Bun Dynasty 外滩十八号2.webp"
     imgAlt: "Shanghai Bun Dynasty 外滩十八号"

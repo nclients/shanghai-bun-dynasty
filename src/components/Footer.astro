@@ -9,7 +9,7 @@ const basePath = import.meta.env.VITE_BASE_URL || "";
     content.footer.bgImg ? (
       <>
         <img
-          src={`${basePath}/${content.footer.bgImg}`}
+          src={`/${content.footer.bgImg}`}
           alt={content.footer.bgImgAlt}
           class={`${content.footer.bgType === "video" ? "sm:hidden" : ""} absolute inset-0 -z-10 h-full w-full object-cover`}
         />

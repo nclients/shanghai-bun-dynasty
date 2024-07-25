@@ -71,7 +71,7 @@ const basePath = import.meta.env.VITE_BASE_URL || "";
         />
         <img
           class={`block sm:hidden h-10 mx-2`}
-          src={`${basePath}/${content.logo}`}
+          src={`/${content.logo}`}
           alt={content.header.title + "Logo"}
         />
         {
@@ -193,7 +193,7 @@ const basePath = import.meta.env.VITE_BASE_URL || "";
           <span class="sr-only">{content.header.title + "logo"}</span>
           <img
             class="h-12 w-auto"
-            src={`${basePath}/${content.logo}`}
+            src={`/${content.logo}`}
             alt={content.header.title + "Logo"}
           />
         </a>

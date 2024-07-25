@@ -90,7 +90,7 @@ const basePath = import.meta.env.VITE_BASE_URL || "";
       section?.bgImg ? (
         <>
           <img
-            src={`${basePath}/${section.bgImg}`}
+            src={`/${section.bgImg}`}
             alt={section.bgImgAlt}
             class={`${section.sectionType === "video" ? "sm:hidden" : ""} absolute inset-0 -z-10 h-full w-full object-cover`}
           />
@@ -182,7 +182,7 @@ const basePath = import.meta.env.VITE_BASE_URL || "";
             {section.imgName ? (
               <div class="lg:flex-grow ">
                 <img
-                  src={`${basePath}/${section.imgName}`}
+                  src={`/${section.imgName}`}
                   class={`object-cover ${section.imgRounded ? `rounded-${section.imgRounded}` : ""} max-w-full drop-shadow-xl`}
                   alt={section.imgAlt}
                 />

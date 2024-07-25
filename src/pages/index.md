@@ -69,7 +69,7 @@ sections:
     titleColor: "#000000"
     description: 
       - text: "Welcome to Food At Shanghai Bun Dynasty 外滩十八号! At our restaurant, we are dedicated to offering an exceptional dining experience with a focus on health, freshness, and natural flavors. Our signature dishes feature the finest in Chinese cuisine, prepared with the utmost care and attention to detail. "
-      - text: "Come and savor the delightful and nutritious flavors we have to offer, tailored to meet the needs and preferences of our modern diners."
+      - text: "Come and savor the delightful and nutritious flavors we have to offer, tailored to meet the needs and preferences of our diners."
       # - text: "We serve Imperial Soup dishes plus other Asian dishes. Feel free to message us about inquiries! We'll get back to you as soon as we can!"
     descriptionColor: "#000000"
 
