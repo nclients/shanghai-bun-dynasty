@@ -1,0 +1,313 @@
+---
+import Button from "./Button.astro";
+const { content, section } = Astro.props;
+const basePath = import.meta.env.VITE_BASE_URL || "";
+---
+
+<section
+  class={`${section.type !== "hero" ? "py-8 sm:py-12 md:py-16" : ""}`}
+  style={section.type !== "hero"
+    ? `background-color: ${section.bgColor}; opacity: ${section.bgOpacity};`
+    : undefined}
+>
+  <div
+    class={`relative lg:overflow-hidden ${section.sectionType !== "video" ? "py-8 lg:py-16" : ""} ${section?.bottomRounded ? `rounded-b-${section?.bottomRounded}` : ""} 
+    ${section?.sectionMarginTopMobile > 0 ? `pt-${section?.sectionMarginTopMobile}` : section?.sectionMarginTopMobile < 0 ? `-mt-${Math.abs(section.sectionMarginTopMobile)}` : ""}
+    ${section?.sectionMarginTopTablet > 0 ? `sm:pt-${section?.sectionMarginTopTablet}` : section?.sectionMarginTopTablet < 0 ? `sm:-mt-${Math.abs(section.sectionMarginTopTablet)}` : ""}
+    ${section?.sectionMarginTopDesktop > 0 ? `md:pt-${section?.sectionMarginTopDesktop}` : section?.sectionMarginTopDesktop < 0 ? `md:-mt-${Math.abs(section.sectionMarginTopDesktop)}` : ""}
+    ${section?.sectionPaddingBottomMobile > 0 ? `pb-${section?.sectionPaddingBottomMobile}` : section?.sectionPaddingBottomMobile < 0 ? `-mb-${Math.abs(section.sectionPaddingBottomMobile)}` : ""}
+    ${section?.sectionPaddingBottomTablet > 0 ? `sm:pb-${section?.sectionPaddingBottomTablet}` : section?.sectionPaddingBottomTablet < 0 ? `sm:-mb-${Math.abs(section.sectionPaddingBottomTablet)}` : ""}
+    ${section?.sectionPaddingBottomDesktop > 0 ? `md:pb-${section?.sectionPaddingBottomDesktop}` : section?.sectionPaddingBottomDesktop < 0 ? `md:-mb-${Math.abs(section.sectionPaddingBottomDesktop)}` : ""}`}
+    style={`
+      ${section.sectionType === "imgBg" && section.height ? `height: ${section.height}vh;` : ""}
+    `}
+  >
+    {
+      section.sectionType === "video" ? (
+        <>
+          {section.bgVideoType === "vimeo" ? (
+            <div
+              class="hidden sm:block h-full overflow-hidden"
+              style="padding:56.25% 0 0 0;position:relative;"
+            >
+              <iframe
+                src={`https://player.vimeo.com/video/${section.bgVideoId}?autoplay=1&loop=1&background=1`}
+                class="absolute inset-0 -z-10 h-full w-full object-cover"
+                frameborder="0"
+                allow="autoplay; fullscreen; picture-in-picture"
+                allowfullscreen
+              />
+              <div class="absolute inset-0 w-full h-full flex justify-center items-center ">
+                <div class="text-center">
+                  <div>
+                    <h1
+                      class="text-3xl font-bold tracking-tight sm:text-6xl"
+                      style={`color: ${section.titleColor}`}
+                    >
+                      {section.title.includes("<br/>")
+                        ? section.title
+                            .split("<br/>")
+                            .map((line: string, index: number) => (
+                              <Fragment key={index}>
+                                <span class="block">{line}</span>
+                              </Fragment>
+                            ))
+                        : section.title}
+                    </h1>
+                    <p
+                      class="mt-6 text-lg leading-6 max-w-3xl"
+                      style={`color: ${section.descriptionColor}`}
+                    >
+                      {section.description.includes("<br/>")
+                        ? section.title
+                            .split("<br/>")
+                            .map((line: string, index: number) => (
+                              <Fragment key={index}>
+                                <span class="block">{line}</span>
+                              </Fragment>
+                            ))
+                        : section.description}
+                    </p>
+                    <div class="mt-10 flex items-center justify-center gap-x-6">
+                      {section.showBtn && (
+                        <Button
+                          content={content}
+                          text={`${section.btnText ? section.btnText : "Order Online"}`}
+                          href={`${content.onlineOrderLink}`}
+                        />
+                      )}
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <script src="https://player.vimeo.com/api/player.js" />
+            </div>
+          ) : null}
+        </>
+      ) : null
+    }
+    {
+      section?.bgImg ? (
+        <>
+          <img
+            src={`${basePath}/${section.bgImg}`}
+            alt={section.bgImgAlt}
+            class={`${section.sectionType === "video" ? "sm:hidden" : ""} absolute inset-0 -z-10 h-full w-full object-cover`}
+          />
+        </>
+      ) : null
+    }
+    {
+      section?.bgColor ? (
+        <>
+          <span
+            class="absolute -z-10 w-full inset-0 top-0 left-0"
+            style={`background-color:${section.bgColor}; opacity: ${section.bgOpacity}`}
+          />
+        </>
+      ) : null
+    }
+    {
+      section?.bottomInfo ? (
+        <span>
+          <span
+            class="absolute -z-10 w-full h-16 inset-x-0 bottom-0 left-0 text-white font-semibold flex justify-center items-center"
+            style={`background-color:#000000; opacity: 0.95`}
+          >
+            {section.bottomInfo}
+          </span>
+        </span>
+      ) : null
+    }
+    <div
+      class={`${section.sectionType === "video" ? "sm:hidden" : ""} m-auto max-w-2xl md:max-w-7xl flex flex-col justify-center items-center`}
+    >
+      {
+        section.sectionType === "imgBg" ||
+        (section.sectionType === "video" && section.imgPosition === "noImg") ? (
+          <div
+            class={`absolute inset-0 w-full h-full flex justify-center items-center`}
+          >
+            <div class="text-center">
+              <div>
+                <h1
+                  class="text-3xl font-bold tracking-tight sm:text-6xl leading-12"
+                  style={`color: ${section.titleColor}`}
+                >
+                  {section.title.includes("<br/>")
+                    ? section.title
+                        .split("<br/>")
+                        .map((line: string, index: number) => (
+                          <Fragment key={index}>
+                            <span style={{ display: "block" }}>{line}</span>
+                          </Fragment>
+                        ))
+                    : section.title}
+                </h1>
+                <p
+                  class="mt-8 text-base sm:text-3xl"
+                  style={`color: ${section.descriptionColor}`}
+                >
+                  {section.description.includes("<br/>")
+                    ? section.title
+                        .split("<br/>")
+                        .map((line: string, index: number) => (
+                          <Fragment key={index}>
+                            <span class="block">{line}</span>
+                          </Fragment>
+                        ))
+                    : section.description}
+                </p>
+                <div class="mt-10 flex items-center justify-center gap-x-6">
+                  {section.showBtn && (
+                    <Button
+                      content={content}
+                      text={`${section.btnText ? section.btnText : "Order Online"}`}
+                      href={`${content.onlineOrderLink}`}
+                    />
+                  )}
+                </div>
+              </div>
+            </div>
+          </div>
+        ) : null
+      }
+      {
+        section.sectionType === "imgWithText" ||
+        (section.sectionType === "video" && section.imgPosition !== "noImg") ? (
+          <div
+            class={`${section.sectionType === "video" ? "block sm:hidden" : ""} relative isolate mx-auto max-w-7xl px-6 pt-4 sm:pt-0 lg:pt-20 lg:grid lg:grid-cols-2 lg:content-center lg:gap-x-10 lg:px-8`}
+            style={`${section.type !== "hero" ? "" : "padding-top:56px"}`}
+          >
+            {section.imgName ? (
+              <div class="lg:flex-grow ">
+                <img
+                  src={`${basePath}/${section.imgName}`}
+                  class={`object-cover ${section.imgRounded ? `rounded-${section.imgRounded}` : ""} max-w-full drop-shadow-xl`}
+                  alt={section.imgAlt}
+                />
+              </div>
+            ) : null}
+
+            <div
+              class={`lg:flex lg:flex-col justify-center items-center ${section.imgPosition === "imgRight" ? "order-first" : ""}`}
+            >
+              {section.type === "hero" ? (
+                <div>
+                  <h1
+                    class="mt-10 max-w-lg text-4xl font-bold sm:text-6xl"
+                    style={`color:${section.titleColor};`}
+                  >
+                    {section.title.includes("<br/>")
+                      ? section.title
+                          .split("<br/>")
+                          .map((line: string, index: number) => (
+                            <Fragment key={index}>
+                              <span style={{ display: "block" }}>{line}</span>
+                            </Fragment>
+                          ))
+                      : section.title}
+                  </h1>
+
+                  <p
+                    class="mt-6 text-lg leading-8"
+                    style={`color:${section.descriptionColor};`}
+                  >
+                    {section.description.includes("<br/>")
+                      ? section.title
+                          .split("<br/>")
+                          .map((line: string, index: number) => (
+                            <Fragment key={index}>
+                              <span class="block">{line}</span>
+                            </Fragment>
+                          ))
+                      : section.description}
+                  </p>
+                </div>
+              ) : null}
+
+              {section.type === "feature" ? (
+                <div>
+                  <h2
+                    class="mt-10 lg:mt-0 max-w-lg text-3xl font-bold tracking-tight sm:text-4xl"
+                    style={`color:${section.titleColor};`}
+                  >
+                    {section.title.includes("<br/>")
+                      ? section.title
+                          .split("<br/>")
+                          .map((line: string, index: number) => (
+                            <Fragment key={index}>
+                              <span style={{ display: "block" }}>{line}</span>
+                            </Fragment>
+                          ))
+                      : section.title}
+                  </h2>
+
+                  <p
+                    class="mt-6 text-lg leading-8"
+                    style={`color:${section.descriptionColor};`}
+                  >
+                    {section.description.includes("<br/>")
+                      ? section.title
+                          .split("<br/>")
+                          .map((line: string, index: number) => (
+                            <Fragment key={index}>
+                              <span class="block">{line}</span>
+                            </Fragment>
+                          ))
+                      : section.description}
+                  </p>
+                  {section?.title2 ? (
+                    <h3
+                      class="mt-10 max-w-lg text-xl font-bold tracking-tight sm:text-2xl"
+                      style={`color:${section.title2Color};`}
+                    >
+                      {section.title2.includes("<br/>")
+                        ? section.title2
+                            .split("<br/>")
+                            .map((line: string, index: number) => (
+                              <Fragment key={index}>
+                                <span style={{ display: "block" }}>{line}</span>
+                              </Fragment>
+                            ))
+                        : section.title2}
+                    </h3>
+                  ) : (
+                    ""
+                  )}
+                  {section?.description2 ? (
+                    <p
+                      class="mt-6 text-lg "
+                      style={`color:${section.description2Color};`}
+                    >
+                      {section.description2.includes("<br/>")
+                        ? section.title
+                            .split("<br/>")
+                            .map((line: string, index: number) => (
+                              <Fragment key={index}>
+                                <span class="block">{line}</span>
+                              </Fragment>
+                            ))
+                        : section.description2}
+                    </p>
+                  ) : (
+                    ""
+                  )}
+                </div>
+              ) : null}
+              {section.showBtn ? (
+                <div class="crusor-pointer my-10 flex items-center gap-x-6">
+                  <Button
+                    content={content}
+                    text={`${section.btnText ? section.btnText : "Order Online"}`}
+                    href={`${content.onlineOrderLink}`}
+                  />
+                </div>
+              ) : null}
+            </div>
+          </div>
+        ) : null
+      }
+    </div>
+  </div>
+</section>

@@ -1,0 +1,75 @@
+---
+import Header from "../components/Header.astro";
+import Feature from "../components/Feature.astro";
+import TextBlock from "../components/TextBlock.astro";
+import Video from "../components/Video.astro";
+import Footer from "../components/Footer.astro";
+import Gallery from "../components/Gallery.astro";
+import GotoTopButton from "../components/GotoTopButton.astro";
+import Modal from "../components/Modal.astro";
+import Map from "../components/Map.astro";
+import GoogleForm from "../components/GoogleForm.astro";
+import "../styles/global.css";
+
+const { content } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <!-- Google Tag Manager -->
+    <script is:inline>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", `${content.tag}`);
+    </script>
+    <!-- End Google Tag Manager -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href={`/${content.favicon}`} />
+    <title>{content.title}</title>
+    <meta name="description" content={`${content.description}`} />
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src={`https://www.googletagmanager.com/ns.html?id=${content.tag}`}
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"></iframe></noscript
+    >
+    <!-- End Google Tag Manager (noscript) -->
+    {content.header && <Header content={content} />}
+
+    {
+      content.sections.map((section: { type: string }) => {
+        if (section.type === "feature" || section.type === "hero") {
+          return <Feature content={content} section={section} />;
+        } else if (section.type === "video") {
+          return <Video content={content} section={section} />;
+        } else if (section.type === "gallery") {
+          return <Gallery section={section} />;
+        } else if (section.type === "modal") {
+          return <Modal content={content} section={section} />;
+        } else if (section.type === "map") {
+          return <Map content={content} section={section} />;
+        } else if (section.type === "form") {
+          return <GoogleForm content={content} section={section} />;
+        } else if (section.type === "textBlock") {
+          return <TextBlock content={content} section={section} />;
+        }
+      })
+    }
+
+    {content.footer && <Footer content={content} />}
+    <GotoTopButton content={content} />
+    <slot />
+  </body>
+</html>

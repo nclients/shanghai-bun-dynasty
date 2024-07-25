@@ -1,0 +1,92 @@
+---
+import Button from "./Button.astro";
+const { content, section } = Astro.props;
+---
+
+<section>
+  <div
+    class={`relative lg:overflow-hidden  lg:h-[${section.imgPosition !== "noImg" ? section.heightvh : "auto"}] py-8 md:py-16`}
+    style={` ${section.imgPosition === "noImg" ? `height: ${section.height}vh;` : ""} `}
+  >
+    {
+      section.bgImg ? (
+        <>
+          <img
+            src={`/${section.bgImg}`}
+            alt={section.bgImgAlt}
+            class="absolute inset-0 -z-10 h-full w-full object-cover"
+          />
+        </>
+      ) : null
+    }
+    <span
+      class="absolute -z-10 w-full inset-0 top-0 left-0"
+      style={`background-color:${section.bgColor}; opacity: ${section.bgOpacity}`}
+    ></span>
+    <div
+      class={`m-auto max-w-2xl md:max-w-7xl grid grid-cols-${section.number} md:gap-8 lg:gap-16`}
+    >
+      {
+        section?.videoType === "vimeo" ? (
+          <>
+            <div style="padding:56.25% 0 0 0;position:relative;">
+              <iframe
+                src="https://player.vimeo.com/video/963713403?h=c588ea9a7a&autoplay=1&loop=1&background=1"
+                style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                frameborder="0"
+                allow="autoplay; fullscreen; picture-in-picture"
+                allowfullscreen
+              />
+            </div>
+            <script src="https://player.vimeo.com/api/player.js" />
+          </>
+        ) : null
+      }
+      {
+        section?.videoType === "youtube" ? (
+          <>
+            {section?.VideoID1 ? (
+              <div
+                class={`ntddigital-ratio ntddigital-ratio-16x9 rounded-${section.videoCornerRounded}`}
+              >
+                <iframe
+                  src={`https://www.youtube.com/embed/${section.VideoID1}`}
+                  title="B2B Marketing Strategies to Win More Customers | NTD Digital"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;"
+                  allowfullscreen
+                />
+              </div>
+            ) : null}
+            {section?.VideoID2 ? (
+              <div
+                class={`ntddigital-ratio ntddigital-ratio-16x9 rounded-${section.videoCornerRounded}`}
+              >
+                <iframe
+                  src={`https://www.youtube.com/embed/${section.VideoID2}`}
+                  title="B2B Marketing Strategies to Win More Customers | NTD Digital"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;"
+                  allowfullscreen
+                />
+              </div>
+            ) : null}
+            {section?.VideoID3 ? (
+              <div
+                class={`ntddigital-ratio ntddigital-ratio-16x9 rounded-${section.videoCornerRounded}`}
+              >
+                <iframe
+                  src={`https://www.youtube.com/embed/${section.VideoID3}`}
+                  title="B2B Marketing Strategies to Win More Customers | NTD Digital"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;"
+                  allowfullscreen
+                />
+              </div>
+            ) : null}
+          </>
+        ) : null
+      }
+    </div>
+  </div>
+</section>

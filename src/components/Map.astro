@@ -1,0 +1,18 @@
+---
+import Button from "./Button.astro";
+const { content, section } = Astro.props;
+---
+
+<div class="relative">
+  <div class="absolute top-4 right-4">
+    <Button content={content} text="Get Direction" href={`${section.url}`} />
+  </div>
+  <iframe
+    src={`${section.iframeUrl}`}
+    class="w-full"
+    aria-hidden="true"
+    allowfullscreen=""
+    loading="lazy"
+    height="500"
+    referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>

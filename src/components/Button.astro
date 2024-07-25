@@ -1,0 +1,12 @@
+---
+const { content, text, href, backgroundColor } = Astro.props;
+---
+
+<a
+  href={href}
+  class={`${content.logoColorScheme === "dark" ? "text-white" : "text-black"} rounded-md px-3.5 py-2.5 text-sm font-semibold shadow-sm hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2`}
+  style={`background-color:${backgroundColor ? backgroundColor : content.logoColor}; target="_blank"`}
+  target="_blank"
+>
+  {text}
+</a>
