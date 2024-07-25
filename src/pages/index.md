@@ -18,12 +18,11 @@ header:
     size: 16
     color: ""
   bgColor: "#ffffff"
-  bgOpacity: "0.75" # 0~1
+  bgOpacity: "0.9" # 0~1
   menuTextColor: "#000000"
   menu:
     - { text: 'Home', link: '/' }
     - { text: 'Gallery', link: '/gallery' }
-    - { text: 'Contact Us', link: '/contact-us' }
 sections:
 # Hero
   - type: "hero" 
@@ -171,16 +170,15 @@ footer:
   mode: 1 # 1
   bgImg: "/gallery2/shanghai_bun_dynasty_dish47.webp"
   bgImgAlt: "Shanghai Bun Dynasty 外滩十八号 - Best Food Today"
-  bgColor: "#152039"
+  bgColor: "#000000"
   bgOpacity: "0.8" # 0~1
   openingHours: 
-    - "Mon - Fri 10:00 AM - 2:30 PM 4:30 PM - 9:00 PM"
-    - "Sat - Sun 10:00 AM - 9:00 PM"
+    - "Mon - Fri: 10:00 AM - 2:30 PM, 4:30 PM - 9:00 PM"
+    - "Sat - Sun: 10:00 AM - 9:00 PM"
 
   menu:
     - { text: 'Home', link: '/' }
     - { text: 'Gallery', link: '/gallery' }
-    - { text: 'Contact Us', link: '/contact-us' }
   FB: false
   FBLink: ""
   IG: false

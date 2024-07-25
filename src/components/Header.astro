@@ -65,7 +65,7 @@ const basePath = import.meta.env.VITE_BASE_URL || "";
         <span class="sr-only">{content.header.title + "Logo"}</span>
         <img
           class={`hidden sm:block h-24 w-auto mr-3`}
-          src={`${basePath}/${content.logo}`}
+          src={`/public/${content.logo}`}
           alt={content.header.title + "Logo"}
           style={`height:${content.logoSize}px`}
         />
