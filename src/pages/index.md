@@ -137,17 +137,17 @@ sections:
 #     sectionPaddingBottomTablet: 10 # 0-12 | 14 | 16 | 20 | 24 | 28 | 32 | 36 | 40 ...
 #     sectionPaddingBottomDesktop: 10 # 0-12 | 14 | 16 | 20 | 24 | 28 | 32 | 36 | 40 ...
 
-# # textBlock - Information
-#   - type: "textBlock" 
-#     bgImg: ""
-#     bgImgAlt: ''
-#     bgColor: "#000"
-#     bgOpacity: "0.9" # 0~1
-#     title: 'NEW! Online Ordering'
-#     titleColor: "#ffffff"
-#     description: 
-#       - text: "Online ordering NOW enabled for pick-up. Just tell us what you want and we'll prepare it as fast as we can. All orders are manually confirmed by us directly. Find out in real-time when your food is ready. All orders are manually confirmed by us in real-time. Watch on-screen when your food is ready for pickup."
-#     descriptionColor: "#ffffff"
+# textBlock - Information
+  - type: "textBlock" 
+    bgImg: ""
+    bgImgAlt: ''
+    bgColor: "#000"
+    bgOpacity: "0.9" # 0~1
+    title: 'NEW! Online Ordering'
+    titleColor: "#ffffff"
+    description: 
+      - text: "Online ordering NOW enabled for pick-up. Just tell us what you want and we'll prepare it as fast as we can. All orders are manually confirmed by us directly. Find out in real-time when your food is ready. All orders are manually confirmed by us in real-time. Watch on-screen when your food is ready for pickup."
+    descriptionColor: "#ffffff"
   
 # map  
   - type: "map"
