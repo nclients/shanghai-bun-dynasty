@@ -160,7 +160,7 @@ sections:
 
 footer:
   mode: 1 # 1
-  bgImg: "/gallery2/shanghai_bun_dynasty_dish47.webp"
+  bgImg: "interior of shanghai bun dynasty.webp"
   bgImgAlt: "Shanghai Bun Dynasty 外滩十八号 - Best Food Today"
   bgColor: "#000000"
   bgOpacity: "0.8" # 0~1
