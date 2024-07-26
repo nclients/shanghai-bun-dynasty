@@ -1,19 +1,19 @@
 ---
-import Button from "./Button.astro";
-const { content, section } = Astro.props;
+const { section } = Astro.props;
 ---
 
 <section>
   <div
-    class={`relative lg:overflow-hidden  lg:h-[${section.imgPosition !== "noImg" ? section.heightvh : "auto"}] py-8 md:py-16`}
-    style={` ${section.imgPosition === "noImg" ? `height: ${section.height}vh;` : ""} `}
+    id={`${section?.id ? section?.id : ""}`}
+    class={`relative lg:overflow-hidden  lg:h-[${section?.imgPosition !== "noImg" ? section?.heightvh : "auto"}] py-8 md:py-16`}
+    style={` ${section?.imgPosition === "noImg" ? `height: ${section?.height}vh;` : ""} `}
   >
     {
       section.bgImg ? (
         <>
           <img
-            src={`/${section.bgImg}`}
-            alt={section.bgImgAlt}
+            src={`/${section?.bgImg}`}
+            alt={section?.bgImgAlt}
             class="absolute inset-0 -z-10 h-full w-full object-cover"
           />
         </>
@@ -21,10 +21,10 @@ const { content, section } = Astro.props;
     }
     <span
       class="absolute -z-10 w-full inset-0 top-0 left-0"
-      style={`background-color:${section.bgColor}; opacity: ${section.bgOpacity}`}
+      style={`background-color:${section?.bgColor}; opacity: ${section?.bgOpacity}`}
     ></span>
     <div
-      class={`m-auto max-w-2xl md:max-w-7xl grid grid-cols-${section.number} md:gap-8 lg:gap-16`}
+      class={`m-auto max-w-2xl md:max-w-7xl grid grid-cols-${section?.number} md:gap-8 lg:gap-16`}
     >
       {
         section?.videoType === "vimeo" ? (
@@ -47,10 +47,10 @@ const { content, section } = Astro.props;
           <>
             {section?.VideoID1 ? (
               <div
-                class={`ntddigital-ratio ntddigital-ratio-16x9 rounded-${section.videoCornerRounded}`}
+                class={`ntddigital-ratio ntddigital-ratio-16x9 rounded-${section?.videoCornerRounded}`}
               >
                 <iframe
-                  src={`https://www.youtube.com/embed/${section.VideoID1}`}
+                  src={`https://www.youtube.com/embed/${section?.VideoID1}`}
                   title="B2B Marketing Strategies to Win More Customers | NTD Digital"
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;"
@@ -60,10 +60,10 @@ const { content, section } = Astro.props;
             ) : null}
             {section?.VideoID2 ? (
               <div
-                class={`ntddigital-ratio ntddigital-ratio-16x9 rounded-${section.videoCornerRounded}`}
+                class={`ntddigital-ratio ntddigital-ratio-16x9 rounded-${section?.videoCornerRounded}`}
               >
                 <iframe
-                  src={`https://www.youtube.com/embed/${section.VideoID2}`}
+                  src={`https://www.youtube.com/embed/${section?.VideoID2}`}
                   title="B2B Marketing Strategies to Win More Customers | NTD Digital"
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;"
@@ -73,10 +73,10 @@ const { content, section } = Astro.props;
             ) : null}
             {section?.VideoID3 ? (
               <div
-                class={`ntddigital-ratio ntddigital-ratio-16x9 rounded-${section.videoCornerRounded}`}
+                class={`ntddigital-ratio ntddigital-ratio-16x9 rounded-${section?.videoCornerRounded}`}
               >
                 <iframe
-                  src={`https://www.youtube.com/embed/${section.VideoID3}`}
+                  src={`https://www.youtube.com/embed/${section?.VideoID3}`}
                   title="B2B Marketing Strategies to Win More Customers | NTD Digital"
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;"

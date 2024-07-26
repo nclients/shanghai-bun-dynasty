@@ -1,7 +1,7 @@
 ---
 tag: ""
 title: "Shanghai Bun Dynasty 外滩十八号 - Best Food Today"
-metaDescription: "Treat your taste buds to the finest Shanghai dishes in the Bay Area. Visit our restaurant for a culinary journey like no other."
+metaDescription: "让您的味蕾尽享湾区最优质的上海美食。欢迎光临Shanghai Bun Dynasty 外滩十八号，体验独特的美食之旅。"
 favicon: "logo.ico"
 logo: "shanghai-bun-dynasty-logo2.webp"
 primaryColor: "#000000" # logo color
@@ -34,13 +34,14 @@ header:
   bgOpacity: "0.9" # 0~1
   menuTextColor: "#000000"
   menu:
-    - { text: "Home", link: "/" }
-    - { text: "Gallery", link: "/gallery" }
-    - { text: "About Us", link: "https://shanghaibundynasty.com/#about-us" }
-    - { text: "Contact Us", link: "https://shanghaibundynasty.com/#contact-us" }
-    - { text: "中文", link: "/zh-cn" }
+    - { text: "首頁", link: "/zh-cn" }
+    - { text: "菜品展示", link: "/zh-cn/gallery" }
+    - { text: "關於我們", link: "https://shanghaibundynasty.com/zh-cn/#about-us" }
+    - { text: "聯繫我們", link: "https://shanghaibundynasty.com/zh-cn/#contact-us" }
+    - { text: "English", link: "/" }
+
   addOrderOnlineBtn: true
-  btnInsteadText: ""
+  btnInsteadText: "線上訂餐"
   addTableReservationBtn: false
   addTelBtn: true
 
@@ -48,7 +49,7 @@ sections:
 # Hero
   - type: "hero" 
     id: ""
-    height: "100" # Conditionally use only when sectionType is imgBg
+    height: "90" # Conditionally use only when sectionType is imgBg
     sectionType: "video" # video | imgWithText | imgBg
     bgVideoType: "gjw" # youtube | vimeo | gjw
     bgVideoId: "1gu0f0ji09b38JwBJpaFEvbd51b61c"
@@ -61,12 +62,12 @@ sections:
       - "外滩十八号"
     titleColor: "#ffffff"
     description: 
-      - "Those classic Shanghai local dishes and the diverse variety of alley snacks are favored by people of all ethnic groups, and they can always be passed down continuously."
+      - "我们致力于为您提供正宗的上海美食体验。无论是经典的上海本帮菜，还是风味独特的小巷小吃，我们的厨师团队都精心准备，力求每一道菜都能带给您最纯正的味觉享受。"
     descriptionColor: "#ffffff"
 
     showBtn: true
-    btn1Text: "See MENU & Order" # default: order online
-    btn1Href: "" # default: order online
+    btn1Text: "線上訂餐" # default: order online
+    btn1Href: "https://www.bestfoodtodayus.com/ordering/?restaurant_uid=d8be6ebc-d040-43fb-b8dc-af0c7746f41b" # default: order online
     btn2Text: "" # default: table reservation
     btn2Href: "" # default: table reservation
 
@@ -86,11 +87,10 @@ sections:
     bgColor: ""
     bgOpacity: "" # 0~1
     title: 
-      - "Food At Shanghai Bun Dynasty"
-      - "外滩十八号"
+      - "菜品展示"
     titleColor: "#000000"
     description: 
-      - "emphasizes culinary techniques and the freshness of ingredients"
+      - "每一口都是对传统的尊重，每一道菜都是对新鲜食材的承诺。"
     descriptionColor: "#333333"
     folderPath: "gallery"
     showImgName: false # true | false
@@ -105,12 +105,11 @@ sections:
     bgColor: ""
     bgOpacity: "" # 0~1
     title: 
-      - "About Us"
+      - "關於我們"
     titleColor: "#000000"
     description: 
-      - "Welcome to Food At Shanghai Bun Dynasty 外滩十八号! At our restaurant, we are dedicated to offering an exceptional dining experience with a focus on health, freshness, and natural flavors. Our signature dishes feature the finest in Chinese cuisine, prepared with the utmost care and attention to detail. "
-      - "Come and savor the delightful and nutritious flavors we have to offer, tailored to meet the needs and preferences of our diners."
-      # - text: "We serve Imperial Soup dishes plus other Asian dishes. Feel free to message us about inquiries! We'll get back to you as soon as we can!"
+      - "歡迎光臨 Shanghai Bun Dynasty 外滩十八号! 在我们的餐馆，我们致力于提供卓越的用餐体验，注重健康、新鲜和自然风味。我们的招牌菜肴展示了最精致的上海美食，精心准备，注重每一个细节。"
+      - "来品尝我们精致而营养丰富的美味，这些菜肴根据顾客的需求和偏好精心调整。"
     descriptionColor: "#000000"
 
 # textBlock - Information
@@ -121,10 +120,10 @@ sections:
     bgColor: "#000"
     bgOpacity: "0.6" # 0~1
     title: 
-      - "NEW! Online Ordering"
+      - "新功能！在线订餐"
     titleColor: "#ffffff"
     description: 
-      - "Online ordering NOW enabled for pick-up. Just tell us what you want and we'll prepare it as fast as we can. All orders are manually confirmed by us directly. Find out in real-time when your food is ready. All orders are manually confirmed by us in real-time. Watch on-screen when your food is ready for pickup."
+      - "现在支持在线订单自取。只需告诉我们您想要的菜品，我们会尽快准备好。所有订单都由我们手动确认。您可以实时查看您的食物何时准备好。订单状态会实时更新，您可以在屏幕上查看您的食物何时可以取走。"
     descriptionColor: "#ffffff"
   
 # map  
@@ -158,14 +157,15 @@ footer:
   bgColor: "#000000"
   bgOpacity: "0.65" # 0~1
   openingHours: 
-    - "Mon - Fri: 10:00 AM - 2:30 PM, 4:30 PM - 9:00 PM"
-    - "Sat - Sun: 10:00 AM - 9:00 PM"
+    - "週一 ～ 週五: 10:00 AM - 2:30 PM, 4:30 PM - 9:00 PM"
+    - "週六 ～ 週日: 10:00 AM - 9:00 PM"
+  openingHoursInsteadText: "營業時間"
   menu:
-    - { text: "Home", link: "/" }
-    - { text: "Gallery", link: "/gallery" }
-    - { text: "About Us", link: "https://shanghaibundynasty.com/#about-us" }
-    - { text: "Contact Us", link: "https://shanghaibundynasty.com/#contact-us" }
-    - { text: "中文", link: "/zh-cn" }
+    - { text: "首頁", link: "/zh-cn" }
+    - { text: "菜品展示", link: "/zh-cn/gallery" }
+    - { text: "關於我們", link: "https://shanghaibundynasty.com/zh-cn/#about-us" }
+    - { text: "聯繫我們", link: "https://shanghaibundynasty.com/zh-cn/#contact-us" }
+    - { text: "English", link: "/" }
 
   FB: false
   FBLink: ""
@@ -182,5 +182,5 @@ footer:
 
 
 # Do not change the content below
-layout: ../layouts/main.astro
+layout: ../../layouts/main.astro
 ---

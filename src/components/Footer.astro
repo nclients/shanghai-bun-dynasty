@@ -1,34 +1,37 @@
 ---
 import PaymentMethod from "./paymentMethod.astro";
+
 const { content } = Astro.props;
-const basePath = import.meta.env.VITE_BASE_URL || "";
+const currentYear = new Date().getFullYear();
 ---
 
 <footer class="relative">
   {
-    content.footer.bgImg ? (
-      <>
-        <img
-          src={`/${content.footer.bgImg}`}
-          alt={content.footer.bgImgAlt}
-          class={`${content.footer.bgType === "video" ? "sm:hidden" : ""} absolute inset-0 -z-10 h-full w-full object-cover`}
-        />
-      </>
+    content.footer?.bgImg ? (
+      <img
+        src={`/${content.footer?.bgImg}`}
+        alt={content.footer?.bgImgAlt}
+        class={`${content.footer?.bgType === "video" ? "sm:hidden" : ""} absolute inset-0 -z-10 h-full w-full object-cover`}
+      />
     ) : null
   }
   <span
     class="absolute -z-10 w-full inset-0 top-0 left-0"
-    style={`background-color:${content.footer.bgColor}; opacity: ${content.footer.bgOpacity}`}
+    style={`background-color:${content.footer?.bgColor}; opacity: ${content.footer?.bgOpacity}`}
   ></span>
 
   <div
     class="mx-auto max-w-7xl overflow-hidden px-6 py-20 sm:py-24 lg:px-8 text-white hover:text-gray-300 text-center"
   >
     {
-      content.footer.openingHours ? (
+      content.footer?.openingHours ? (
         <div class="pb-10 leading-8">
-          <div class="font-semibold">Opening Hours</div>
-          {content.footer.openingHours.map((info: string, index: number) => (
+          <div class="font-semibold">
+            {content.footer?.openingHoursInsteadText
+              ? content.footer?.openingHoursInsteadText
+              : "Opening Hours"}
+          </div>
+          {content.footer?.openingHours.map((info: string, index: number) => (
             <Fragment key={index}>
               <div>{info}</div>
             </Fragment>
@@ -41,16 +44,16 @@ const basePath = import.meta.env.VITE_BASE_URL || "";
       aria-label="Footer"
     >
       {
-        content.footer.menu &&
+        content.footer?.menu &&
           content.footer.menu.map(
             (item: { link: string; text: string }, index: number) => (
               <Fragment key={index}>
                 <div class="pb-6 font-semibold">
                   <a
-                    href={item.link}
+                    href={item?.link}
                     class="text-sm leading-6 text-white hover:text-gray-300"
                   >
-                    {item.text}
+                    {item?.text}
                   </a>
                 </div>
               </Fragment>
@@ -60,9 +63,9 @@ const basePath = import.meta.env.VITE_BASE_URL || "";
     </nav>
     <div class="mt-10 flex justify-center space-x-10">
       {
-        content.footer.FB && (
+        content.footer?.FB && (
           <a
-            href={content.footer.FBLink}
+            href={content.footer?.FBLink}
             class="text-gray-400 hover:text-gray-500"
           >
             <span class="sr-only">Facebook</span>
@@ -82,9 +85,9 @@ const basePath = import.meta.env.VITE_BASE_URL || "";
         )
       }
       {
-        content.footer.IG && (
+        content.footer?.IG && (
           <a
-            href={content.footer.IGLink}
+            href={content.footer?.IGLink}
             class="text-gray-400 hover:text-gray-500"
           >
             <span class="sr-only">Instagram</span>
@@ -104,9 +107,9 @@ const basePath = import.meta.env.VITE_BASE_URL || "";
         )
       }
       {
-        content.footer.X && (
+        content.footer?.X && (
           <a
-            href={content.footer.XLink}
+            href={content.footer?.XLink}
             class="text-gray-400 hover:text-gray-500"
           >
             <span class="sr-only">X</span>
@@ -122,9 +125,9 @@ const basePath = import.meta.env.VITE_BASE_URL || "";
         )
       }
       {
-        content.footer.youtube && (
+        content.footer?.youtube && (
           <a
-            href={content.footer.youtubeLink}
+            href={content.footer?.youtubeLink}
             class="text-gray-400 hover:text-gray-500"
           >
             <span class="sr-only">YouTube</span>
@@ -144,9 +147,9 @@ const basePath = import.meta.env.VITE_BASE_URL || "";
         )
       }
       {
-        content.footer.yelp && (
+        content.footer?.yelp && (
           <a
-            href={content.footer.yelpLink}
+            href={content.footer?.yelpLink}
             class="text-gray-400 hover:text-gray-500"
           >
             <span class="sr-only">Yelp</span>
@@ -168,7 +171,7 @@ const basePath = import.meta.env.VITE_BASE_URL || "";
     </div>
 
     {
-      content.footer.paymentMethod ? (
+      content.footer?.paymentMethod ? (
         <div class="mt-8">
           <PaymentMethod content={content} />
         </div>
@@ -177,7 +180,8 @@ const basePath = import.meta.env.VITE_BASE_URL || "";
       )
     }
     <p class="mt-10 text-center text-xs leading-5 text-gray-500">
-      &copy; 2024 {content.title.replace(" - Best Food Today", "")} - <a
+      &copy; {currentYear}
+      {content?.title.replace(" - Best Food Today", "")} - <a
         href="https://bestfood.today/"
         >BEST FOOD TODAY
       </a>All rights reserved.

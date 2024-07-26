@@ -1,7 +1,6 @@
 ---
-import Button from "./Button.astro";
+import PrimaryButton from "./ui/PrimaryButton.astro";
 const { content, section } = Astro.props;
-const basePath = import.meta.env.VITE_BASE_URL || "";
 ---
 
 <style>
@@ -83,18 +82,24 @@ const basePath = import.meta.env.VITE_BASE_URL || "";
         </svg></button
       >
     </div>
-    <p style={`font-size:${section.titleSize}px;color:${section.titleColor}`}>
-      {section.title}
+    <p style={`font-size:${section?.titleSize}px;color:${section?.titleColor}`}>
+      {
+        section?.title.map((line: string, index: number) => (
+          <Fragment key={index}>
+            <span class="block mt-2">{line}</span>
+          </Fragment>
+        ))
+      }
     </p>
     <p
-      style={`font-size:${section.descriptionSize}px;color:${section.descriptionColor}`}
+      style={`font-size:${section?.descriptionSize}px;color:${section?.descriptionColor}`}
     >
-      {section.description}
+      {section?.description}
     </p>
 
     <img
-      src={`/${section.imgName}`}
-      alt={`${section.imgAlt}`}
+      src={`/${section?.imgName}`}
+      alt={`${section?.imgAlt}`}
       style="width: 100%; border-radius: 10px;"
       class="mt-4"
     />
@@ -102,14 +107,14 @@ const basePath = import.meta.env.VITE_BASE_URL || "";
       style="margin: 25px 0; display: flex; flex-direction: column; justify-content: center; align-items: center;"
     >
       <div id="promoButton" class="bounce pt-4">
-        <Button
+        <PrimaryButton
           content={content}
-          text={`${section.buttonText}`}
-          href={`${content.onlineOrderLink}`}
+          text={`${section?.buttonText}`}
+          href={`${content?.onlineOrderLink}`}
         />
       </div>
       <div style="margin-top: 20px; margin-bottom:-30px;" class="text-center">
-        <span style="font-size: 10px;">{content.title}</span>
+        <span style="font-size: 10px;">{content?.title}</span>
       </div>
     </div>
 

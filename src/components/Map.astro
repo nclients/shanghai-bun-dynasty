@@ -1,14 +1,30 @@
 ---
-import Button from "./Button.astro";
+import PrimaryButton from "./ui/PrimaryButton.astro";
+import SecondaryButton from "./ui/SecondaryButton.astro";
 const { content, section } = Astro.props;
 ---
 
-<div class="relative">
+<div class="relative" id={`${section?.id ? section?.id : ""}`}>
   <div class="absolute top-4 right-4">
-    <Button content={content} text="Get Direction" href={`${section.url}`} />
+    <div class="flex gap-4">
+      <PrimaryButton
+        content={content}
+        text={section.getDirectionBtnInsteadText
+          ? section.getDirectionBtnInsteadText
+          : `Get Direction`}
+        href={`${section?.url}`}
+      />
+      <SecondaryButton
+        content={content}
+        text={section.telInsteadText
+          ? section.telInsteadText
+          : `tel: ${content.tel}`}
+        href={`tel:${content?.tel}`}
+      />
+    </div>
   </div>
   <iframe
-    src={`${section.iframeUrl}`}
+    src={`${section?.iframeUrl}`}
     class="w-full"
     aria-hidden="true"
     allowfullscreen=""

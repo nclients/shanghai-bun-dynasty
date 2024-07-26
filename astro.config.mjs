@@ -3,6 +3,5 @@ import tailwind from '@astrojs/tailwind';
 
 // https://astro.build/config
 export default defineConfig({
-	base: process.env.VITE_BASE_URL || '/',
 	integrations: [tailwind()],
 });

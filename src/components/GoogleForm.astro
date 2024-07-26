@@ -1,5 +1,5 @@
 ---
-const { content, section } = Astro.props;
+const { section } = Astro.props;
 ---
 
 <section>
@@ -7,8 +7,8 @@ const { content, section } = Astro.props;
   <div class="bg-white flex justify-center">
     <div class="mx-auto px-6 lg:px-8">
       <iframe
-        src={`${section.src}`}
-        height={`${section.height}`}
+        src={`${section?.src}`}
+        height={`${section?.height}`}
         class="w-screen"
         frameborder="0"
         marginheight="0"

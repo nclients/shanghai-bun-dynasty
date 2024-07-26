@@ -5,10 +5,11 @@ import TextBlock from "../components/TextBlock.astro";
 import Video from "../components/Video.astro";
 import Footer from "../components/Footer.astro";
 import Gallery from "../components/Gallery.astro";
-import GotoTopButton from "../components/GotoTopButton.astro";
+import GotoTopButton from "../components/ui/GotoTopButton.astro";
 import Modal from "../components/Modal.astro";
 import Map from "../components/Map.astro";
 import GoogleForm from "../components/GoogleForm.astro";
+import Iframe from "../components/Iframe.astro";
 import "../styles/global.css";
 
 const { content } = Astro.props;
@@ -34,7 +35,7 @@ const { content } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href={`/${content.favicon}`} />
     <title>{content.title}</title>
-    <meta name="description" content={`${content.description}`} />
+    <meta name="description" content={`${content.metaDescription}`} />
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
@@ -46,6 +47,7 @@ const { content } = Astro.props;
         style="display:none;visibility:hidden"></iframe></noscript
     >
     <!-- End Google Tag Manager (noscript) -->
+
     {content.header && <Header content={content} />}
 
     {
@@ -69,6 +71,7 @@ const { content } = Astro.props;
     }
 
     {content.footer && <Footer content={content} />}
+
     <GotoTopButton content={content} />
     <slot />
   </body>

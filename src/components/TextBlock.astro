@@ -1,68 +1,64 @@
 ---
-import Button from "./Button.astro";
-const { content, section } = Astro.props;
-const basePath = import.meta.env.VITE_BASE_URL || "";
+import { cn } from "../utils/cn";
+const { section } = Astro.props;
 ---
 
-<section class="relative py-8 sm:py-12 md:py-16">
+<section
+  class={cn(
+    "relative mt-16 sm:mt-24 md:mt-32",
+    section?.bgImg ? "py-8 sm:py-16 lg:py-24" : ""
+  )}
+  id={`${section?.id ? section?.id : ""}`}
+>
   <div class="mx-auto max-w-4xl text-center px-6">
     {
-      section.bgImg ? (
-        <>
-          <img
-            src={`${basePath}/${section.bgImg}`}
-            alt={section.bgImgAlt}
-            class={`${section.sectionType === "video" ? "sm:hidden" : ""} absolute inset-0 -z-10 h-full w-full object-cover`}
-          />
-        </>
-      ) : null
+      section?.bgImg ? (
+        <img
+          src={`/public${section?.bgImg}`}
+          alt={section?.bgImgAlt}
+          class={cn(
+            "absolute inset-0 -z-10 h-full w-full object-cover",
+            `${section?.sectionType === "video" ? "sm:hidden" : ""}`
+          )}
+        />
+      ) : (
+        ""
+      )
     }
     {
-      section.bgColor ? (
-        <>
-          <span
-            class="absolute -z-10 w-full inset-0 top-0 left-0"
-            style={`background-color:${section.bgColor}; opacity: ${section.bgOpacity}`}
-          />{" "}
-        </>
-      ) : null
+      section?.bgColor ? (
+        <span
+          class="absolute -z-10 w-full inset-0 top-0 left-0"
+          style={`background-color:${section?.bgColor}; opacity: ${section?.bgOpacity}`}
+        />
+      ) : (
+        ""
+      )
     }
     <h2
       class="text-3xl font-bold tracking-tight sm:text-4xl"
-      style={`color:${section.titleColor}`}
+      style={`color:${section?.titleColor}`}
     >
       {
-        section.title.includes("<br/>")
-          ? section.title.split("<br/>").map((line: string, index: number) => (
-              <Fragment key={index}>
-                <span class="block">{line}</span>
-              </Fragment>
-            ))
-          : section.title
-      }
-    </h2>
-    {
-      section?.description?.some(
-        (item: { text: string | any[] }) => item?.text?.length > 0
-      ) ? (
-        section.description.map((item: { text: unknown }, index: any) => (
+        section?.title?.map((line: string, index: number) => (
           <Fragment key={index}>
-            <p
-              class="mt-4 text-lg leading-8"
-              style={`color:${section.descriptionColor}`}
-            >
-              {item.text}
-            </p>
+            <span class="block">{line}</span>
           </Fragment>
         ))
-      ) : (
-        <p
-          class="mt-4 text-lg leading-8"
-          style={`color:${section.descriptionColor}`}
-        >
-          {section.description}
-        </p>
-      )
+      }
+    </h2>
+
+    {
+      section?.description?.map((line: string, index: number) => (
+        <Fragment key={index}>
+          <p
+            class="mt-4 text-lg leading-8"
+            style={`color:${section?.descriptionColor}`}
+          >
+            {line}
+          </p>
+        </Fragment>
+      ))
     }
   </div>
 </section>
