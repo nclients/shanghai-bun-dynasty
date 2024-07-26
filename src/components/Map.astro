@@ -4,7 +4,11 @@ import SecondaryButton from "./ui/SecondaryButton.astro";
 const { content, section } = Astro.props;
 ---
 
-<div class="relative" id={`${section?.id ? section?.id : ""}`}>
+<div
+  class="relative"
+  id={`${section?.id ? section?.id : ""}`}
+  style="scroll-margin-top: 150px;"
+>
   <div class="absolute top-4 right-4">
     <div class="flex gap-4">
       <PrimaryButton

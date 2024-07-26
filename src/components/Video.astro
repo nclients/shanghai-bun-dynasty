@@ -6,7 +6,7 @@ const { section } = Astro.props;
   <div
     id={`${section?.id ? section?.id : ""}`}
     class={`relative lg:overflow-hidden  lg:h-[${section?.imgPosition !== "noImg" ? section?.heightvh : "auto"}] py-8 md:py-16`}
-    style={` ${section?.imgPosition === "noImg" ? `height: ${section?.height}vh;` : ""} `}
+    style={`scroll-margin-top: 150px; ${section?.imgPosition === "noImg" ? `height: ${section?.height}vh;` : ""} `}
   >
     {
       section.bgImg ? (

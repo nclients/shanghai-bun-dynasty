@@ -1,7 +1,7 @@
 ---
 tag: ""
 title: "Shanghai Bun Dynasty 外滩十八号 - Best Food Today"
-metaDescription: "让您的味蕾尽享湾区最优质的上海美食。欢迎光临Shanghai Bun Dynasty 外滩十八号，体验独特的美食之旅。"
+metaDescription: "讓您的味蕾盡情享受灣區最優質的上海美食。歡迎光臨Shanghai Bun Dynasty 外灘十八號，體驗獨特的美食之旅。"
 favicon: "logo.ico"
 logo: "shanghai-bun-dynasty-logo2.webp"
 primaryColor: "#000000" # logo color
@@ -35,7 +35,7 @@ header:
   menuTextColor: "#000000"
   menu:
     - { text: "首頁", link: "/zh-cn" }
-    - { text: "菜品展示", link: "/gallery" }
+    - { text: "菜品展示", link: "/zh-cn/gallery" }
     - { text: "關於我們", link: "https://shanghaibundynasty.com/zh-cn/#about-us" }
     - { text: "聯繫我們", link: "https://shanghaibundynasty.com/zh-cn/#contact-us" }
     - { text: "English", link: "/" }
@@ -58,10 +58,11 @@ sections:
     bgColor: "#000000"
     bgOpacity: "0.1" # 0~1
     title: 
-      - "菜品展示"
+      - "Shanghai Bun Dynasty"
+      - "外滩十八号"
     titleColor: "#ffffff"
     description: 
-      - "我们致力于为您提供正宗的上海美食体验。无论是经典的上海本帮菜，还是风味独特的小巷小吃，我们的厨师团队都精心准备，力求每一道菜都能带给您最纯正的味觉享受。"
+      - "我們致力於為您提供正宗的上海美食體驗。無論是經典的上海本幫菜，還是風味獨特的小巷小吃，我們的廚師團隊都精心準備，力求每一道菜都能帶給您最純正的味覺享受。"
     descriptionColor: "#ffffff"
 
     showBtn: true
@@ -70,7 +71,7 @@ sections:
     btn2Text: "" # default: table reservation
     btn2Href: "" # default: table reservation
 
-    bannerImg: "Shanghai Bun Dynasty 外滩十八号.webp"
+    bannerImg: "Shanghai Bun Dynasty 外滩十八号2.webp"
     imgAlt: "Shanghai Bun Dynasty 外滩十八号"
     imgPosition: "imgLeft" # imgLeft | imgRight
    
@@ -89,7 +90,7 @@ sections:
       - "菜品展示"
     titleColor: "#000000"
     description: 
-      - "每一口都是对传统的尊重，每一道菜都是对新鲜食材的承诺。"
+      - "每一口都是對傳統的尊重，每一道菜都是對新鮮食材的承諾。"
     descriptionColor: "#333333"
     folderPath: "gallery2"
     showImgName: false # true | false
@@ -97,6 +98,7 @@ sections:
     menuItemImgRounded: "3xl" # sm | md | lg | xl | 2xl | 3xl | full
 
 
+  
 # map  
   - type: "map"
     id: "contact-us"
@@ -133,7 +135,7 @@ footer:
   openingHoursInsteadText: "營業時間"
   menu:
     - { text: "首頁", link: "/zh-cn" }
-    - { text: "菜品展示", link: "/gallery" }
+    - { text: "菜品展示", link: "/zh-cn/gallery" }
     - { text: "關於我們", link: "https://shanghaibundynasty.com/zh-cn/#about-us" }
     - { text: "聯繫我們", link: "https://shanghaibundynasty.com/zh-cn/#contact-us" }
     - { text: "English", link: "/" }

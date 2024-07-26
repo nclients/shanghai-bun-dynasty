@@ -36,8 +36,8 @@ header:
   menu:
     - { text: "Home", link: "/" }
     - { text: "Gallery", link: "/gallery" }
-    - { text: "About Us", link: "https://shanghaibundynasty.com/#about-us" }
-    - { text: "Contact Us", link: "https://shanghaibundynasty.com/#contact-us" }
+    - { text: "About Us", link: "/#about-us" }
+    - { text: "Contact Us", link: "/#contact-us" }
     - { text: "中文", link: "/zh-cn" }
   addOrderOnlineBtn: true
   btnInsteadText: ""

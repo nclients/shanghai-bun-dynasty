@@ -9,7 +9,7 @@ const { content, section } = Astro.props;
 <section
   class={cn(section?.type !== "hero" ? "pt-16 sm:pt-48 md:pt-64" : "")}
   style={section?.type !== "hero"
-    ? `background-color: ${section?.bgColor}; opacity: ${section?.bgOpacity};`
+    ? `background-color: ${section?.bgColor}; opacity: ${section?.bgOpacity}; scroll-margin-top: 150px;`
     : ""}
   id={`${section?.id ? section?.id : ""}`}
 >

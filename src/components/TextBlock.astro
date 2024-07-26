@@ -8,13 +8,14 @@ const { section } = Astro.props;
     "relative mt-16 sm:mt-24 md:mt-32",
     section?.bgImg ? "py-8 sm:py-16 lg:py-24" : ""
   )}
+  style="scroll-margin-top: 150px;"
   id={`${section?.id ? section?.id : ""}`}
 >
   <div class="mx-auto max-w-4xl text-center px-6">
     {
       section?.bgImg ? (
         <img
-          src={`/public${section?.bgImg}`}
+          src={`${section?.bgImg}`}
           alt={section?.bgImgAlt}
           class={cn(
             "absolute inset-0 -z-10 h-full w-full object-cover",
