@@ -134,8 +134,8 @@ sections:
     url: "https://maps.app.goo.gl/sGRWDcJekoVwS7ET8"
     iframeUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3172.8496107568026!2d-122.0202152240354!3d37.322389872102924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb5bc9bf3a785%3A0x1986586558b9d981!2sShanghai%20No.1!5e0!3m2!1sen!2sus!4v1721888062721!5m2!1sen!2sus"
     addTelBtn: true
-    getDirectionBtnInsteadText: "帶我去餐館"
-    telInsteadText: "聯繫我們"
+    getDirectionBtnInsteadText: ""
+    telInsteadText: ""
  
   # - type: "modal"
   #   bgColor: "#333"
