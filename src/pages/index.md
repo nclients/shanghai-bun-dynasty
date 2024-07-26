@@ -9,7 +9,9 @@ secondaryColor: "#ffffff"
 primaryColorScheme: "dark" # dark | light
 secondaryColorScheme: "light"
 logoSize: 55
-onlineOrderLink: "https://www.bestfoodtodayus.com/ordering/?restaurant_uid=d8be6ebc-d040-43fb-b8dc-af0c7746f41b"
+dataGlfCuid: "9164e91c-f064-485d-87b4-627aae01b043"
+dataGlfRuid: "d8be6ebc-d040-43fb-b8dc-af0c7746f41b"
+orderOnlineLink: "https://www.bestfoodtodayus.com/ordering/?restaurant_uid=d8be6ebc-d040-43fb-b8dc-af0c7746f41b"
 tableReservationLink: ""
 tel: "408-255-1288"
 
@@ -36,13 +38,18 @@ header:
   menu:
     - { text: "Home", link: "/" }
     - { text: "Gallery", link: "/gallery" }
-    - { text: "About Us", link: "/#about-us" }
-    - { text: "Contact Us", link: "/#contact-us" }
+    - { text: "About Us", link: "https://shanghaibundynasty.com/#about-us" }
+    - { text: "Contact Us", link: "https://shanghaibundynasty.com/#contact-us" }
     - { text: "中文", link: "/zh-cn" }
   addOrderOnlineBtn: true
-  btnInsteadText: ""
+  orderOnlineBtnInsteadText: ""
   addTableReservationBtn: false
+  tableReservationBtnInsteadText: ""
   addTelBtn: true
+  telTextColor: "#000"
+  addOtherBtn: false
+  otherBtnInsteadText: ""
+  otherBtnHref: ""
 
 sections:
 # Hero
@@ -64,7 +71,11 @@ sections:
       - "Those classic Shanghai local dishes and the diverse variety of alley snacks are favored by people of all ethnic groups, and they can always be passed down continuously."
     descriptionColor: "#ffffff"
 
-    showBtn: true
+    addOrderOnlineBtn: true
+    orderOnlineBtnInsteadText: "See MENU & Order"
+    addTableReservationBtn: false
+    tableReservationBtnInsteadText: ""
+    showOtherBtn: false
     btn1Text: "See MENU & Order" # default: order online
     btn1Href: "" # default: order online
     btn2Text: "" # default: table reservation

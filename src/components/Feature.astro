@@ -1,6 +1,7 @@
 ---
 import PrimaryButton from "./ui/PrimaryButton.astro";
 import SecondaryButton from "./ui/SecondaryButton.astro";
+import OrderOnlineBtn from "./ui/OrderOnlineBtn.astro";
 import { cn } from "../utils/cn";
 
 const { content, section } = Astro.props;
@@ -11,7 +12,7 @@ const { content, section } = Astro.props;
   style={section?.type !== "hero"
     ? `background-color: ${section?.bgColor}; opacity: ${section?.bgOpacity}; scroll-margin-top: 150px;`
     : ""}
-  id={`${section?.id ? section?.id : ""}`}
+  id={`${section?.id || ""}`}
 >
   <div
     class={cn(
@@ -66,20 +67,35 @@ const { content, section } = Astro.props;
               ))}
 
               <div class="mt-10 flex items-center justify-center gap-x-6 text-center">
-                {section?.showBtn && section?.btn1Text ? (
+                {section?.addOrderOnlineBtn ? (
+                  <OrderOnlineBtn
+                    content={content}
+                    text={section?.orderOnlineBtnInsteadText || "Order Online"}
+                  />
+                ) : (
+                  ""
+                )}
+                {section?.addTableReservationBtn && (
+                  <SecondaryButton
+                    content={content}
+                    text="Table Reservation"
+                    href={`${content?.tableReservationLink}`}
+                  />
+                )}
+                {section?.showOtherBtn && section?.btn1Text ? (
                   <PrimaryButton
                     content={content}
                     text={`${section?.btn1Text ? section?.btn1Text : "Order Online"}`}
                     href={
                       section.btn1Href
                         ? section.btn1Href
-                        : content.onlineOrderLink
+                        : content.orderOnlineLink
                     }
                   />
                 ) : (
                   ""
                 )}
-                {section?.showBtn && section?.btn2Text ? (
+                {section?.showOtherBtn && section?.btn2Text ? (
                   <SecondaryButton
                     content={content}
                     text={`${section?.btn2Text ? section?.btn2Text : "Table Reservation"}`}
@@ -177,20 +193,38 @@ const { content, section } = Astro.props;
                   </Fragment>
                 ))}
                 <div class="mt-10 flex items-center justify-center gap-x-6">
-                  {section?.showBtn && section?.btn1Text ? (
+                  {section?.addOrderOnlineBtn ? (
+                    <OrderOnlineBtn
+                      content={content}
+                      text={
+                        content?.header?.orderOnlineBtnInsteadText ||
+                        "Order Online"
+                      }
+                    />
+                  ) : (
+                    ""
+                  )}
+                  {section?.addTableReservationBtn && (
+                    <SecondaryButton
+                      content={content}
+                      text="Table Reservation"
+                      href={`${content?.tableReservationLink}`}
+                    />
+                  )}
+                  {section?.showOtherBtn && section?.btn1Text ? (
                     <PrimaryButton
                       content={content}
                       text={`${section?.btn1Text ? section?.btn1Text : "Order Online"}`}
                       href={
                         section.btn1Href
                           ? section.btn1Href
-                          : content.onlineOrderLink
+                          : content.orderOnlineLink
                       }
                     />
                   ) : (
                     ""
                   )}
-                  {section?.showBtn && section?.btn2Text ? (
+                  {section?.showOtherBtn && section?.btn2Text ? (
                     <SecondaryButton
                       content={content}
                       text={`${section?.btn2Text ? section?.btn2Text : "Table Reservation"}`}
@@ -327,20 +361,37 @@ const { content, section } = Astro.props;
                   ) : (
                     ""
                   )}
-                  {section?.showBtn && section?.btn1Text ? (
+                  {section?.addOrderOnlineBtn ? (
+                    <OrderOnlineBtn
+                      content={content}
+                      text={
+                        section?.orderOnlineBtnInsteadText || "Order Online"
+                      }
+                    />
+                  ) : (
+                    ""
+                  )}
+                  {section?.addTableReservationBtn && (
+                    <SecondaryButton
+                      content={content}
+                      text="Table Reservation"
+                      href={`${content?.tableReservationLink}`}
+                    />
+                  )}
+                  {section?.showOtherBtn && section?.btn1Text ? (
                     <PrimaryButton
                       content={content}
                       text={`${section?.btn1Text ? section?.btn1Text : "Order Online"}`}
                       href={
                         section.btn1Href
                           ? section.btn1Href
-                          : content.onlineOrderLink
+                          : content.orderOnlineLink
                       }
                     />
                   ) : (
                     ""
                   )}
-                  {section?.showBtn && section?.btn2Text ? (
+                  {section?.showOtherBtn && section?.btn2Text ? (
                     <SecondaryButton
                       content={content}
                       text={`${section?.btn2Text ? section?.btn2Text : "Table Reservation"}`}

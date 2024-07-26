@@ -9,7 +9,7 @@ const { section } = Astro.props;
     section?.bgImg ? "py-8 sm:py-16 lg:py-24" : ""
   )}
   style="scroll-margin-top: 150px;"
-  id={`${section?.id ? section?.id : ""}`}
+  id={`${section?.id || ""}`}
 >
   <div class="mx-auto max-w-4xl text-center px-6">
     {

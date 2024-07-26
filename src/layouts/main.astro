@@ -9,7 +9,6 @@ import GotoTopButton from "../components/ui/GotoTopButton.astro";
 import Modal from "../components/Modal.astro";
 import Map from "../components/Map.astro";
 import GoogleForm from "../components/GoogleForm.astro";
-import Iframe from "../components/Iframe.astro";
 import "../styles/global.css";
 
 const { content } = Astro.props;
@@ -69,10 +68,12 @@ const { content } = Astro.props;
         }
       })
     }
-    <Iframe />
     {content.footer && <Footer content={content} />}
 
     <GotoTopButton content={content} />
     <slot />
+
+    <script src="https://www.fbgcdn.com/embedder/js/ewm2.js" defer async
+    ></script>
   </body>
 </html>

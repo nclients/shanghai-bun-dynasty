@@ -6,7 +6,7 @@ const images = await getImagesFromFolder("/public/" + section.folderPath);
 ---
 
 <section
-  id={`${section?.id ? section?.id : ""}`}
+  id={`${section?.id || ""}`}
   class="pt-16 sm:pt-48 md:pt-64"
   style="scroll-margin-top: 150px;"
 >

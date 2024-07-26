@@ -6,7 +6,7 @@ const { content, section } = Astro.props;
 
 <div
   class="relative"
-  id={`${section?.id ? section?.id : ""}`}
+  id={`${section?.id || ""}`}
   style="scroll-margin-top: 150px;"
 >
   <div class="absolute top-4 right-4">

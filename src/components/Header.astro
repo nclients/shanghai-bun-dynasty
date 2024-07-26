@@ -1,6 +1,7 @@
 ---
 import PrimaryButton from "./ui/PrimaryButton.astro";
 import SecondaryButton from "./ui/SecondaryButton.astro";
+import OrderOnlineBtn from "./ui/OrderOnlineBtn.astro";
 const { content } = Astro.props;
 ---
 
@@ -113,14 +114,11 @@ const { content } = Astro.props;
       <div class="cursor-pointer flex flex-1 items-center justify-end gap-x-6">
         {
           content?.header?.addOrderOnlineBtn ? (
-            <PrimaryButton
+            <OrderOnlineBtn
               content={content}
               text={
-                content?.header?.btnInsteadText
-                  ? content?.header?.btnInsteadText
-                  : "Order Online"
+                content?.header?.orderOnlineBtnInsteadText || "Order Online"
               }
-              href={`${content?.onlineOrderLink}`}
             />
           ) : (
             ""
@@ -133,6 +131,17 @@ const { content } = Astro.props;
               text="Table Reservation"
               href={`${content?.tableReservationLink}`}
             />
+          )
+        }
+        {
+          content?.header?.addOtherBtn ? (
+            <PrimaryButton
+              content={content}
+              text={content?.header?.otherBtnInsteadText}
+              href={`${content?.header?.otherBtnHref}`}
+            />
+          ) : (
+            ""
           )
         }
         {
@@ -211,7 +220,7 @@ const { content } = Astro.props;
                       ? content?.header?.btnInsteadText
                       : "Order Online"
                   }
-                  href={`${content?.onlineOrderLink}`}
+                  href={`${content?.orderOnlineLink}`}
                 />
               ) : (
                 ""

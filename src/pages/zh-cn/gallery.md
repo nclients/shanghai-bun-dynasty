@@ -9,9 +9,12 @@ secondaryColor: "#ffffff"
 primaryColorScheme: "dark" # dark | light
 secondaryColorScheme: "light"
 logoSize: 55
-onlineOrderLink: "https://www.bestfoodtodayus.com/ordering/?restaurant_uid=d8be6ebc-d040-43fb-b8dc-af0c7746f41b"
+orderOnlineLink: "https://www.bestfoodtodayus.com/ordering/?restaurant_uid=d8be6ebc-d040-43fb-b8dc-af0c7746f41b"
 tableReservationLink: ""
 tel: "408-255-1288"
+dataGlfCuid: "9164e91c-f064-485d-87b4-627aae01b043"
+dataGlfRuid: "d8be6ebc-d040-43fb-b8dc-af0c7746f41b"
+
 
 # banner:
 #   text: 
@@ -25,6 +28,7 @@ tel: "408-255-1288"
 #   textColor: "#000000"
 #   bgColor: "#FFFFFF"
 #   bgOpacity: "1" # 0~1
+
 header:
   textAfterLogo: 
     text: ""
@@ -39,35 +43,42 @@ header:
     - { text: "關於我們", link: "https://shanghaibundynasty.com/zh-cn/#about-us" }
     - { text: "聯繫我們", link: "https://shanghaibundynasty.com/zh-cn/#contact-us" }
     - { text: "English", link: "/" }
-
   addOrderOnlineBtn: true
-  btnInsteadText: "線上訂餐"
+  orderOnlineBtnInsteadText: ""
   addTableReservationBtn: false
+  tableReservationBtnInsteadText: ""
   addTelBtn: true
+  telTextColor: "#000"
+  addOtherBtn: false
+  otherBtnInsteadText: ""
+  otherBtnHref: ""
 
 sections:
 # Hero
   - type: "hero" 
     id: ""
     height: "90" # Conditionally use only when sectionType is imgBg
-    sectionType: "video" # video | imgWithText | imgBg
-    bgVideoType: "gjw" # youtube | vimeo | gjw
-    bgVideoId: "1gu0f0ji09b38JwBJpaFEvbd51b61c"
+    sectionType: "imgWithText" # video | imgWithText | imgBg
+    bgVideoType: "" # youtube | vimeo | gjw
+    bgVideoId: ""
     bgImg: "shanghai-bun-dynasty.webp"
     bgImgAlt: "Shanghai Bun Dynasty 外滩十八号 - Best Food Today"
     bgColor: "#000000"
     bgOpacity: "0.1" # 0~1
     title: 
-      - "Shanghai Bun Dynasty"
-      - "外滩十八号"
+      - "菜品展示"
     titleColor: "#ffffff"
     description: 
       - "我們致力於為您提供正宗的上海美食體驗。無論是經典的上海本幫菜，還是風味獨特的小巷小吃，我們的廚師團隊都精心準備，力求每一道菜都能帶給您最純正的味覺享受。"
     descriptionColor: "#ffffff"
 
-    showBtn: true
-    btn1Text: "線上訂餐" # default: order online
-    btn1Href: "https://www.bestfoodtodayus.com/ordering/?restaurant_uid=d8be6ebc-d040-43fb-b8dc-af0c7746f41b" # default: order online
+    addOrderOnlineBtn: true
+    orderOnlineBtnInsteadText: "查看菜單並點餐"
+    addTableReservationBtn: false
+    tableReservationBtnInsteadText: ""
+    showOtherBtn: false
+    btn1Text: "" # default: order online
+    btn1Href: "" # default: order online
     btn2Text: "" # default: table reservation
     btn2Href: "" # default: table reservation
 
@@ -97,7 +108,34 @@ sections:
     imgNameColor: "#000000"
     menuItemImgRounded: "3xl" # sm | md | lg | xl | 2xl | 3xl | full
 
+# textBlock - About Us
+  - type: "textBlock" 
+    id: "about-us"
+    bgImg: ""
+    bgImgAlt: ""
+    bgColor: ""
+    bgOpacity: "" # 0~1
+    title: 
+      - "關於我們"
+    titleColor: "#000000"
+    description: 
+      - "歡迎光臨 Shanghai Bun Dynasty 外灘十八號! 在我們的餐館，我們致力於提供卓越的用餐體驗，注重健康、新鮮和自然風味。我們的招牌菜餚展示了最精緻的上海美食，精心準備，並專注於每個細節。"
+      - "來品嚐我們精緻而營養豐富的美味，這些菜餚根據顧客的需求和偏好精心調整。"
+    descriptionColor: "#000000"
 
+# textBlock - Information
+  - type: "textBlock" 
+    id: ""
+    bgImg: "/gallery2/shanghai_bun_dynasty_dish47.webp"
+    bgImgAlt: "Shanghai Bun Dynasty 外滩十八号 - Best Food Today"
+    bgColor: "#000"
+    bgOpacity: "0.6" # 0~1
+    title: 
+      - "新功能！在線訂餐"
+    titleColor: "#ffffff"
+    description: 
+      - "現在支援線上訂單自取。只要告訴我們您想要的菜餚，我們會​​盡快準備好。所有訂單都由我們手動確認。您可以即時查看您的食物何時準備好。訂單狀態會即時更新，您可以在螢幕上查看您的食物何時可以取走。"
+    descriptionColor: "#ffffff"
   
 # map  
   - type: "map"
@@ -157,3 +195,4 @@ footer:
 # Do not change the content below
 layout: ../../layouts/main.astro
 ---
+
