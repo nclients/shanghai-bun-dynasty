@@ -4,7 +4,7 @@ import SecondaryButton from "./ui/SecondaryButton.astro";
 const { content, section } = Astro.props;
 ---
 
-<div
+<section
   class="relative"
   id={`${section?.id || ""}`}
   style="scroll-margin-top: 150px;"
@@ -35,4 +35,4 @@ const { content, section } = Astro.props;
     loading="lazy"
     height="500"
     referrerpolicy="no-referrer-when-downgrade"></iframe>
-</div>
+</section>

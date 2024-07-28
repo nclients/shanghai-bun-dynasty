@@ -192,6 +192,12 @@ footer:
   paymentMethod: "" 
   #alipay,applePay,cash,discover,googlePay,jcb,maestro,mastercard,stripe,unionPay,visa,weChatPay,payPal 
 
+seo:
+    metaDescription: "在灣區品嚐最地道的上海菜餚。來Shanghai Bun Dynasty 外滩十八号，享受無與倫比的美食之旅。"
+    keywords: "外滩十八号, 上海菜, 正宗上海菜, 傳統上海菜, 最好吃的上海美食"
+    img: "/shanghai_bun_dynasty_dish47.webp"
+    thisPageUrl: "https://shanghaibundynasty.com/zh-cn/"
+    locale: "zh_CN" # zh_TW | zh_CN
 
 # Do not change the content below
 layout: ../../layouts/main.astro

@@ -32,9 +32,76 @@ const { content } = Astro.props;
     <!-- End Google Tag Manager -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href={`/${content.favicon}`} />
     <title>{content.title}</title>
-    <meta name="description" content={`${content.metaDescription}`} />
+    {
+      content?.seo?.metaDescription ? (
+        <meta name="description" content={content.seo.metaDescription} />
+      ) : (
+        ""
+      )
+    }
+    {
+      content?.seo?.keywords ? (
+        <meta name="keywords" content={content.seo.keywords} />
+      ) : (
+        ""
+      )
+    }
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Best Food Today" />
+
+    <!-- Open Graph Meta Tags -->
+    {content?.title ? <meta property="og:title" content={content.title} /> : ""}
+    {
+      content?.seo?.metaDescription ? (
+        <meta property="og:description" content={content.seo.metaDescription} />
+      ) : (
+        ""
+      )
+    }
+    {
+      content?.seo?.img ? (
+        <meta property="og:image" content={content.seo.img} />
+      ) : (
+        ""
+      )
+    }
+    {
+      content?.seo?.thisPageUrl ? (
+        <meta property="og:url" content={content?.seo?.thisPageUrl} />
+      ) : (
+        ""
+      )
+    }
+    <meta property="og:type" content="restaurant" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    {
+      content?.title ? (
+        <meta name="twitter:title" content={content.title} />
+      ) : (
+        ""
+      )
+    }
+    {
+      content?.seo?.metaDescription ? (
+        <meta
+          name="twitter:description"
+          content={content.seo.metaDescription}
+        />
+      ) : (
+        ""
+      )
+    }
+    {
+      content?.seo?.img ? (
+        <meta name="twitter:image" content={content.seo.img} />
+      ) : (
+        ""
+      )
+    }
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->

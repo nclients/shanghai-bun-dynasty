@@ -124,16 +124,7 @@ const { content } = Astro.props;
             ""
           )
         }
-        {
-          content?.header?.addTableReservationBtn && (
-            <SecondaryButton
-              content={content}
-              text="Table Reservation"
-              href={`${content?.tableReservationLink}`}
-            />
-          )
-        }
-        {
+         {
           content?.header?.addOtherBtn ? (
             <PrimaryButton
               content={content}
@@ -144,6 +135,16 @@ const { content } = Astro.props;
             ""
           )
         }
+        {
+          content?.header?.addTableReservationBtn && (
+            <SecondaryButton
+              content={content}
+              text="Table Reservation"
+              href={`${content?.tableReservationLink}`}
+            />
+          )
+        }
+       
         {
           content?.header?.addTelBtn && (
             <a

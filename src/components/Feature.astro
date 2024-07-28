@@ -30,6 +30,7 @@ const { content, section } = Astro.props;
           style="padding:56.25% 0 0 0;position:relative;"
         >
           <iframe
+            id="bg-video"
             src={
               section?.bgVideoType === "vimeo"
                 ? `https://player.vimeo.com/video/${section?.bgVideoId}?autoplay=1&loop=1&background=1`
@@ -173,7 +174,7 @@ const { content, section } = Astro.props;
               <div>
                 <h1
                   class="text-3xl font-bold tracking-tight sm:text-6xl leading-12 text-center"
-                  style={`color: ${section.titleColor}`}
+                  style={`color: ${section.titleColor || "#000"}`}
                 >
                   {section?.title.map((line: string, index: number) => (
                     <Fragment key={index}>
@@ -417,3 +418,21 @@ const { content, section } = Astro.props;
     </div>
   </div>
 </section>
+<script>
+  // Function to mute the video
+  function muteGJWVideo() {
+    const iframe = document.getElementById("gjw-video") as HTMLIFrameElement;
+    if (iframe) {
+      const src = iframe.src;
+      // Add mute parameter if not already present
+      if (!src.includes("mute=1")) {
+        iframe.src = src + "&mute=1";
+      }
+    }
+  }
+
+  // Call the function after the iframe has loaded
+  document.getElementById("gjw-video")!.onload = function () {
+    muteGJWVideo();
+  };
+</script>

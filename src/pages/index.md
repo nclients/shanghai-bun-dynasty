@@ -1,7 +1,6 @@
 ---
 tag: ""
 title: "Shanghai Bun Dynasty 外滩十八号 - Best Food Today"
-metaDescription: "Treat your taste buds to the finest Shanghai dishes in the Bay Area. Visit our restaurant for a culinary journey like no other."
 favicon: "logo.ico"
 logo: "shanghai-bun-dynasty-logo2.webp"
 primaryColor: "#000000" # logo color
@@ -190,6 +189,15 @@ footer:
   yelpLink: ""
   paymentMethod: "" 
   #alipay,applePay,cash,discover,googlePay,jcb,maestro,mastercard,stripe,unionPay,visa,weChatPay,payPal 
+
+  seo:
+    metaDescription: "Treat your taste buds to the finest Shanghai dishes in the Bay Area. Visit our restaurant for a culinary journey like no other."
+    keywords: "Food At Shanghai Bun Dynasty, Shanghai cuisine Cupertino, authentic Shanghai food, Shanghai restaurant Cupertino, Chinese food Cupertino, traditional Shanghai dishes, best Shanghai food Cupertino"
+    img: "/shanghai_bun_dynasty_dish47.webp"
+    thisPageUrl: "https://shanghaibundynasty.com/"
+    locale: "en_US" # zh_TW | zh_CN
+
+
 
 
 # Do not change the content below
