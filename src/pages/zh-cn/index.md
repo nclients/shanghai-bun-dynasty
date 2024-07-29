@@ -40,8 +40,8 @@ header:
   menu:
     - { text: "首頁", link: "/zh-cn" }
     - { text: "菜品展示", link: "/zh-cn/gallery" }
-    - { text: "關於我們", link: "https://shanghaibundynasty.com/zh-cn/#about-us" }
-    - { text: "聯繫我們", link: "https://shanghaibundynasty.com/zh-cn/#contact-us" }
+    - { text: "關於我們", link: "#about-us" }
+    - { text: "聯繫我們", link: "#contact-us" }
     - { text: "English", link: "/" }
   addOrderOnlineBtn: true
   orderOnlineBtnInsteadText: ""
@@ -83,7 +83,7 @@ sections:
     btn2Text: "" # default: table reservation
     btn2Href: "" # default: table reservation
 
-    bannerImg: "Shanghai Bun Dynasty 外灘十八號.webp"
+    bannerImg: "shanghai_bun_dynasty.webp"
     imgAlt: "Shanghai Bun Dynasty 外灘十八號"
     imgPosition: "imgLeft" # imgLeft | imgRight
    
@@ -175,10 +175,9 @@ footer:
   menu:
     - { text: "首頁", link: "/zh-cn" }
     - { text: "菜品展示", link: "/zh-cn/gallery" }
-    - { text: "關於我們", link: "https://shanghaibundynasty.com/zh-cn/#about-us" }
-    - { text: "聯繫我們", link: "https://shanghaibundynasty.com/zh-cn/#contact-us" }
+    - { text: "關於我們", link: "#about-us" }
+    - { text: "聯繫我們", link: "#contact-us" }
     - { text: "English", link: "/" }
-
   FB: false
   FBLink: ""
   IG: false
