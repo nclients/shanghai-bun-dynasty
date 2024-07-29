@@ -1,5 +1,5 @@
 ---
-tag: ""
+tag: "GTM-KBLT9BSL"
 title: "Shanghai Bun Dynasty 外灘十八號 - Best Food Today"
 metaDescription: "Treat your taste buds to the finest Shanghai dishes in the Bay Area. Visit our restaurant for a culinary journey like no other."
 favicon: "logo.ico"

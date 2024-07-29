@@ -1,5 +1,5 @@
 ---
-tag: ""
+tag: "GTM-KBLT9BSL"
 title: "Shanghai Bun Dynasty 外灘十八號 - Best Food Today"
 metaDescription: "讓您的味蕾盡情享受灣區最優質的上海美食。歡迎光臨Shanghai Bun Dynasty 外灘十八號，體驗獨特的美食之旅。"
 favicon: "logo.ico"

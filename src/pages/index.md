@@ -1,5 +1,5 @@
 ---
-tag: ""
+tag: "GTM-KBLT9BSL"
 title: "Shanghai Bun Dynasty 外灘十八號 - Best Food Today"
 favicon: "logo.ico"
 logo: "shanghai-bun-dynasty-logo2.webp"
