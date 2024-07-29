@@ -1,6 +1,6 @@
 ---
 tag: ""
-title: "Shanghai Bun Dynasty 外滩十八号 - Best Food Today"
+title: "Shanghai Bun Dynasty 外灘十八號 - Best Food Today"
 favicon: "logo.ico"
 logo: "shanghai-bun-dynasty-logo2.webp"
 primaryColor: "#000000" # logo color
@@ -59,12 +59,12 @@ sections:
     bgVideoType: "gjw" # youtube | vimeo | gjw
     bgVideoId: "1gu0f0ji09b38JwBJpaFEvbd51b61c"
     bgImg: "shanghai-bun-dynasty.webp"
-    bgImgAlt: "Shanghai Bun Dynasty 外滩十八号 - Best Food Today"
+    bgImgAlt: "Shanghai Bun Dynasty 外灘十八號 - Best Food Today"
     bgColor: "#000000"
     bgOpacity: "0.1" # 0~1
     title: 
       - "Shanghai Bun Dynasty"
-      - "外滩十八号"
+      - "外灘十八號"
     titleColor: "#ffffff"
     description: 
       - "Those classic Shanghai local dishes and the diverse variety of alley snacks are favored by people of all ethnic groups, and they can always be passed down continuously."
@@ -80,8 +80,8 @@ sections:
     btn2Text: "" # default: table reservation
     btn2Href: "" # default: table reservation
 
-    bannerImg: "Shanghai Bun Dynasty 外滩十八号.webp"
-    imgAlt: "Shanghai Bun Dynasty 外滩十八号"
+    bannerImg: "Shanghai Bun Dynasty 外灘十八號.webp"
+    imgAlt: "Shanghai Bun Dynasty 外灘十八號"
     imgPosition: "imgLeft" # imgLeft | imgRight
    
     bottomRounded: "3xl" # sm | md | lg | xl | 2xl | 3xl | full
@@ -97,7 +97,7 @@ sections:
     bgOpacity: "" # 0~1
     title: 
       - "Food At Shanghai Bun Dynasty"
-      - "外滩十八号"
+      - "外灘十八號"
     titleColor: "#000000"
     description: 
       - "emphasizes culinary techniques and the freshness of ingredients"
@@ -118,7 +118,7 @@ sections:
       - "About Us"
     titleColor: "#000000"
     description: 
-      - "Welcome to Food At Shanghai Bun Dynasty 外滩十八号! At our restaurant, we are dedicated to offering an exceptional dining experience with a focus on health, freshness, and natural flavors. Our signature dishes feature the finest in Chinese cuisine, prepared with the utmost care and attention to detail. "
+      - "Welcome to Food At Shanghai Bun Dynasty 外灘十八號! At our restaurant, we are dedicated to offering an exceptional dining experience with a focus on health, freshness, and natural flavors. Our signature dishes feature the finest in Chinese cuisine, prepared with the utmost care and attention to detail. "
       - "Come and savor the delightful and nutritious flavors we have to offer, tailored to meet the needs and preferences of our diners."
       # - text: "We serve Imperial Soup dishes plus other Asian dishes. Feel free to message us about inquiries! We'll get back to you as soon as we can!"
     descriptionColor: "#000000"
@@ -127,7 +127,7 @@ sections:
   - type: "textBlock" 
     id: ""
     bgImg: "/gallery2/shanghai_bun_dynasty_dish47.webp"
-    bgImgAlt: "Shanghai Bun Dynasty 外滩十八号 - Best Food Today"
+    bgImgAlt: "Shanghai Bun Dynasty 外灘十八號 - Best Food Today"
     bgColor: "#000"
     bgOpacity: "0.6" # 0~1
     title: 
@@ -164,7 +164,7 @@ sections:
 footer:
   mode: 1 # 1
   bgImg: "interior of shanghai bun dynasty.webp"
-  bgImgAlt: "Shanghai Bun Dynasty 外滩十八号 - Best Food Today"
+  bgImgAlt: "Shanghai Bun Dynasty 外灘十八號 - Best Food Today"
   bgColor: "#000000"
   bgOpacity: "0.65" # 0~1
   openingHours: 

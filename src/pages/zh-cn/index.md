@@ -1,6 +1,6 @@
 ---
 tag: ""
-title: "Shanghai Bun Dynasty 外滩十八号 - Best Food Today"
+title: "Shanghai Bun Dynasty 外灘十八號 - Best Food Today"
 metaDescription: "讓您的味蕾盡情享受灣區最優質的上海美食。歡迎光臨Shanghai Bun Dynasty 外灘十八號，體驗獨特的美食之旅。"
 favicon: "logo.ico"
 logo: "shanghai-bun-dynasty-logo2.webp"
@@ -62,12 +62,12 @@ sections:
     bgVideoType: "gjw" # youtube | vimeo | gjw
     bgVideoId: "1gu0f0ji09b38JwBJpaFEvbd51b61c"
     bgImg: "shanghai-bun-dynasty.webp"
-    bgImgAlt: "Shanghai Bun Dynasty 外滩十八号 - Best Food Today"
+    bgImgAlt: "Shanghai Bun Dynasty 外灘十八號 - Best Food Today"
     bgColor: "#000000"
     bgOpacity: "0.1" # 0~1
     title: 
       - "Shanghai Bun Dynasty"
-      - "外滩十八号"
+      - "外灘十八號"
     titleColor: "#ffffff"
     description: 
       - "我們致力於為您提供正宗的上海美食體驗。無論是經典的上海本幫菜，還是風味獨特的小巷小吃，我們的廚師團隊都精心準備，力求每一道菜都能帶給您最純正的味覺享受。"
@@ -83,8 +83,8 @@ sections:
     btn2Text: "" # default: table reservation
     btn2Href: "" # default: table reservation
 
-    bannerImg: "Shanghai Bun Dynasty 外滩十八号.webp"
-    imgAlt: "Shanghai Bun Dynasty 外滩十八号"
+    bannerImg: "Shanghai Bun Dynasty 外灘十八號.webp"
+    imgAlt: "Shanghai Bun Dynasty 外灘十八號"
     imgPosition: "imgLeft" # imgLeft | imgRight
    
     bottomRounded: "3xl" # sm | md | lg | xl | 2xl | 3xl | full
@@ -128,7 +128,7 @@ sections:
   - type: "textBlock" 
     id: ""
     bgImg: "/gallery2/shanghai_bun_dynasty_dish47.webp"
-    bgImgAlt: "Shanghai Bun Dynasty 外滩十八号 - Best Food Today"
+    bgImgAlt: "Shanghai Bun Dynasty 外灘十八號 - Best Food Today"
     bgColor: "#000"
     bgOpacity: "0.6" # 0~1
     title: 
@@ -165,7 +165,7 @@ sections:
 footer:
   mode: 1 # 1
   bgImg: "interior of shanghai bun dynasty.webp"
-  bgImgAlt: "Shanghai Bun Dynasty 外滩十八号 - Best Food Today"
+  bgImgAlt: "Shanghai Bun Dynasty 外灘十八號 - Best Food Today"
   bgColor: "#000000"
   bgOpacity: "0.65" # 0~1
   openingHours: 
@@ -193,8 +193,8 @@ footer:
   #alipay,applePay,cash,discover,googlePay,jcb,maestro,mastercard,stripe,unionPay,visa,weChatPay,payPal 
 
 seo:
-    metaDescription: "在灣區品嚐最地道的上海菜餚。來Shanghai Bun Dynasty 外滩十八号，享受無與倫比的美食之旅。"
-    keywords: "外滩十八号, 上海菜, 正宗上海菜, 傳統上海菜, 最好吃的上海美食"
+    metaDescription: "在灣區品嚐最地道的上海菜餚。來Shanghai Bun Dynasty 外灘十八號，享受無與倫比的美食之旅。"
+    keywords: "外灘十八號, 上海菜, 正宗上海菜, 傳統上海菜, 最好吃的上海美食"
     img: "/shanghai_bun_dynasty_dish47.webp"
     thisPageUrl: "https://shanghaibundynasty.com/zh-cn/"
     locale: "zh_CN" # zh_TW | zh_CN

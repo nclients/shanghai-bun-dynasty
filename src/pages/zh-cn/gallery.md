@@ -1,6 +1,6 @@
 ---
 tag: ""
-title: "Shanghai Bun Dynasty 外滩十八号 - Best Food Today"
+title: "Shanghai Bun Dynasty 外灘十八號 - Best Food Today"
 metaDescription: "讓您的味蕾盡情享受灣區最優質的上海美食。歡迎光臨Shanghai Bun Dynasty 外灘十八號，體驗獨特的美食之旅。"
 favicon: "logo.ico"
 logo: "shanghai-bun-dynasty-logo2.webp"
@@ -62,7 +62,7 @@ sections:
     bgVideoType: "" # youtube | vimeo | gjw
     bgVideoId: ""
     bgImg: "shanghai-bun-dynasty.webp"
-    bgImgAlt: "Shanghai Bun Dynasty 外滩十八号 - Best Food Today"
+    bgImgAlt: "Shanghai Bun Dynasty 外灘十八號 - Best Food Today"
     bgColor: "#000000"
     bgOpacity: "0.1" # 0~1
     title: 
@@ -82,8 +82,8 @@ sections:
     btn2Text: "" # default: table reservation
     btn2Href: "" # default: table reservation
 
-    bannerImg: "Shanghai Bun Dynasty 外滩十八号2.webp"
-    imgAlt: "Shanghai Bun Dynasty 外滩十八号"
+    bannerImg: "Shanghai Bun Dynasty 外灘十八號2.webp"
+    imgAlt: "Shanghai Bun Dynasty 外灘十八號"
     imgPosition: "imgLeft" # imgLeft | imgRight
    
     bottomRounded: "3xl" # sm | md | lg | xl | 2xl | 3xl | full
@@ -127,7 +127,7 @@ sections:
   - type: "textBlock" 
     id: ""
     bgImg: "/gallery2/shanghai_bun_dynasty_dish47.webp"
-    bgImgAlt: "Shanghai Bun Dynasty 外滩十八号 - Best Food Today"
+    bgImgAlt: "Shanghai Bun Dynasty 外灘十八號 - Best Food Today"
     bgColor: "#000"
     bgOpacity: "0.6" # 0~1
     title: 
@@ -164,7 +164,7 @@ sections:
 footer:
   mode: 1 # 1
   bgImg: "interior of shanghai bun dynasty.webp"
-  bgImgAlt: "Shanghai Bun Dynasty 外滩十八号 - Best Food Today"
+  bgImgAlt: "Shanghai Bun Dynasty 外灘十八號 - Best Food Today"
   bgColor: "#000000"
   bgOpacity: "0.65" # 0~1
   openingHours: 
