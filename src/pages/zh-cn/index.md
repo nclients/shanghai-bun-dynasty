@@ -44,7 +44,7 @@ header:
     - { text: "聯繫我們", link: "#contact-us" }
     - { text: "English", link: "/" }
   addOrderOnlineBtn: true
-  orderOnlineBtnInsteadText: ""
+  orderOnlineBtnInsteadText: "查看菜單並點餐"
   addTableReservationBtn: false
   tableReservationBtnInsteadText: ""
   addTelBtn: true
