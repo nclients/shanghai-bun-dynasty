@@ -95,27 +95,33 @@ const { section } = Astro.props;
                   allowfullscreen
                 />
               </div>
-              <script src="https://player.vimeo.com/api/player.js" />
             </Fragment>
           ))
         : null
     }
 
-    <!-- {
-        section?.videoType === "youtube" ? (
-          <>
-            {section?.VideoID1 ? (
-              <div
-                class={`ntddigital-ratio ntddigital-ratio-16x9 rounded-${section?.videoCornerRounded}`}
-              >
+    {
+      section?.videoType === "youtube"
+        ? section.videoId.map((id: string) => (
+            <Fragment key={id}>
+              <div style={{ padding: "56.25% 0 0 0", position: "relative" }}>
                 <iframe
-                  src={`https://www.youtube.com/embed/${section?.VideoID1}`}
-                  title="B2B Marketing Strategies to Win More Customers | NTD Digital"
+                  src={`https://www.youtube.com/embed/${id}`}
+                  style={{
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    width: "100%",
+                    height: "100%",
+                  }}
                   frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;"
+                  allow="autoplay; fullscreen; picture-in-picture"
                   allowfullscreen
                 />
               </div>
-            ) : null} -->
+            </Fragment>
+          ))
+        : null
+    }
   </div>
 </section>

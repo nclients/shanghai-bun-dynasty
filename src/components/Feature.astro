@@ -17,7 +17,7 @@ const { content, section } = Astro.props;
   <div
     class={cn(
       "relative lg:overflow-hidden",
-      `${section?.sectionType !== "video" ? "py-8 lg:py-16" : ""} ${section?.bottomRounded ? `rounded-b-${section?.bottomRounded}` : ""}`
+      section?.bottomRounded ? `rounded-b-${section?.bottomRounded}` : ""
     )}
     style={`
       ${section?.sectionType === "imgBg" && section?.height ? `height: ${section?.height}vh;` : ""}
@@ -48,7 +48,10 @@ const { content, section } = Astro.props;
           <div class="absolute inset-0 w-full h-full flex justify-center items-center">
             <div class="text-center">
               <h1
-                class="text-3xl font-bold tracking-tight sm:text-6xl text-center"
+                class={cn(
+                  "text-3xl font-bold tracking-tight sm:text-6xl",
+                  section?.isTextAlignCenter ? "text-center" : ""
+                )}
                 style={`color: ${section?.titleColor}`}
               >
                 {section?.title.map((line: string, index: number) => (
@@ -60,7 +63,10 @@ const { content, section } = Astro.props;
               {section?.description.map((info: string, index: number) => (
                 <Fragment key={index}>
                   <p
-                    class="mt-6 text-lg leading-6 max-w-3xl text-center"
+                    class={cn(
+                      "mt-6 text-lg leading-6 max-w-3xl",
+                      section?.isTextAlignCenter ? "text-center" : ""
+                    )}
                     style={`color: ${section?.descriptionColor}`}
                   >
                     {info}
@@ -68,7 +74,12 @@ const { content, section } = Astro.props;
                 </Fragment>
               ))}
 
-              <div class="mt-10 flex items-center justify-center gap-x-6 text-center">
+              <div
+                class={cn(
+                  "mt-10 flex items-center justify-center gap-x-6",
+                  section?.isTextAlignCenter ? "text-center" : ""
+                )}
+              >
                 {section?.addOrderOnlineBtn ? (
                   <OrderOnlineBtn
                     content={content}
@@ -161,7 +172,7 @@ const { content, section } = Astro.props;
     }
     <div
       class={cn(
-        "m-auto max-w-2xl md:max-w-7xl flex flex-col justify-center items-center",
+        "m-auto max-w-2xl md:max-w-7xl flex flex-col justify-center items-center py-8",
         `${section?.sectionType === "video" ? "sm:hidden" : ""}`
       )}
     >
@@ -174,7 +185,10 @@ const { content, section } = Astro.props;
             <div class="text-center">
               <div>
                 <h1
-                  class="text-3xl font-bold tracking-tight sm:text-6xl leading-12 text-center"
+                  class={cn(
+                    "text-3xl font-bold tracking-tight sm:text-6xl leading-12",
+                    section?.isTextAlignCenter ? "text-center" : ""
+                  )}
                   style={`color: ${section.titleColor || "#000"}`}
                 >
                   {section?.title.map((line: string, index: number) => (
@@ -187,7 +201,10 @@ const { content, section } = Astro.props;
                 {section.description.map((info: string, index: number) => (
                   <Fragment key={index}>
                     <p
-                      class="mt-8 text-base sm:text-3xl text-center"
+                      class={cn(
+                        "mt-8 text-base sm:text-3xl",
+                        section?.isTextAlignCenter ? "text-center" : ""
+                      )}
                       style={`color: ${section.descriptionColor}`}
                     >
                       {info}
@@ -251,14 +268,23 @@ const { content, section } = Astro.props;
         section.sectionType === "imgWithText" ||
         (section.sectionType === "video" && section?.imgPosition) ? (
           <div
-            class={`${section.sectionType === "video" ? "block sm:hidden" : ""} relative isolate mx-auto max-w-7xl px-6 py-8 sm:pt-0 lg:pt-20 lg:grid lg:grid-cols-2 lg:content-center lg:gap-x-10 lg:px-8`}
+            class={cn(
+              "relative isolate mx-auto max-w-7xl px-6 lg:grid lg:grid-cols-2 lg:content-center lg:gap-x-10 lg:px-8",
+              section.sectionType === "video" ? "block sm:hidden" : "",
+              section?.bannerMarginTopMobile
+                ? `pt-${section.bannerMarginTopMobile} sm:t-0`
+                : ""
+            )}
             style={`${section.type !== "hero" ? "" : "padding-top:56px"}`}
           >
             {section.bannerImg ? (
-              <div class="lg:flex-grow ">
+              <div class="lg:flex-grow">
                 <img
                   src={`/${section.bannerImg}`}
-                  class={`object-cover ${section.imgRounded ? `rounded-${section.imgRounded}` : ""} max-w-full drop-shadow-xl`}
+                  class={cn(
+                    "object-cover max-w-full drop-shadow-xl rounded-lg",
+                    section?.imgRounded ? `rounded-${section.imgRounded}` : ""
+                  )}
                   alt={section.imgAlt}
                 />
               </div>
@@ -268,14 +294,18 @@ const { content, section } = Astro.props;
 
             <div
               class={cn(
-                "lg:flex lg:flex-col justify-center items-center text-center",
-                section?.imgPosition === "imgRight" ? "order-first" : ""
+                "lg:flex lg:flex-col justify-center items-center",
+                section?.imgPosition === "imgRight" ? "order-first" : "",
+                section?.isTextAlignCenter ? "text-center" : ""
               )}
             >
               {section?.type === "hero" ? (
                 <div>
                   <h1
-                    class="mt-10 max-w-lg text-4xl font-bold sm:text-6xl text-center"
+                    class={cn(
+                      "mt-10 max-w-lg text-4xl font-bold sm:text-6xl",
+                      section?.isTextAlignCenter ? "text-center" : ""
+                    )}
                     style={`color:${section?.titleColor};`}
                   >
                     {section?.title.map((line: string, index: number) => (
@@ -288,7 +318,10 @@ const { content, section } = Astro.props;
                   {section?.description.map((info: string, index: number) => (
                     <Fragment key={index}>
                       <p
-                        class="mt-6 text-lg leading-8 text-center"
+                        class={cn(
+                          "mt-6 text-lg leading-8",
+                          section?.isTextAlignCenter ? "text-center" : ""
+                        )}
                         style={`color:${section?.descriptionColor};`}
                       >
                         {info}
@@ -303,7 +336,10 @@ const { content, section } = Astro.props;
               {section.type === "feature" ? (
                 <div>
                   <h2
-                    class="mt-10 lg:mt-0 max-w-lg text-3xl font-bold tracking-tight sm:text-4xl text-center"
+                    class={cn(
+                      "mt-10 lg:mt-0 max-w-lg text-3xl font-bold tracking-tight sm:text-4xl",
+                      section?.isTextAlignCenter ? "text-center" : ""
+                    )}
                     style={`color:${section?.titleColor};`}
                   >
                     {section?.title.map((line: string, index: number) => (
@@ -316,7 +352,10 @@ const { content, section } = Astro.props;
                   {section?.description.map((info: string, index: number) => (
                     <Fragment key={index}>
                       <p
-                        class="mt-6 text-lg leading-8 text-center"
+                        class={cn(
+                          "mt-6 text-lg leading-8",
+                          section?.isTextAlignCenter ? "text-center" : ""
+                        )}
                         style={`color:${section?.descriptionColor};`}
                       >
                         {info}
@@ -351,7 +390,10 @@ const { content, section } = Astro.props;
                         (info: string, index: number) => (
                           <Fragment key={index}>
                             <p
-                              class="mt-6 text-lg leading-8 text-center"
+                              class={cn(
+                                "mt-6 text-lg leading-8",
+                                section?.isTextAlignCenter ? "text-center" : ""
+                              )}
                               style={`color:${section.description2Color};`}
                             >
                               {info}

@@ -67,7 +67,7 @@ const { content } = Astro.props;
             class={`hidden sm:block h-24 w-auto mr-3`}
             src={`/${content?.logo}`}
             alt={content?.header?.title + " Logo"}
-            style={`height:${content?.logoSize}px`}
+            style={`height:${content?.header?.logoSize}px`}
           />
           <img
             class={`block sm:hidden h-10 mx-2`}

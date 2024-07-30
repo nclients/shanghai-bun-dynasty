@@ -7,7 +7,6 @@ primaryColor: "#000000" # logo color
 secondaryColor: "#ffffff"
 primaryColorScheme: "dark" # dark | light
 secondaryColorScheme: "light"
-logoSize: 55
 dataGlfCuid: "9164e91c-f064-485d-87b4-627aae01b043"
 dataGlfRuid: "d8be6ebc-d040-43fb-b8dc-af0c7746f41b"
 orderOnlineLink: "https://www.bestfoodtodayus.com/ordering/?restaurant_uid=d8be6ebc-d040-43fb-b8dc-af0c7746f41b"
@@ -27,6 +26,7 @@ tel: "408-255-1288"
 #   bgColor: "#FFFFFF"
 #   bgOpacity: "1" # 0~1
 header:
+  logoSize: 55
   textAfterLogo: 
     text: ""
     size: 16
