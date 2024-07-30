@@ -305,7 +305,9 @@ const { content } = Astro.props;
 
   menuItems.forEach((item) => {
     item.addEventListener("click", function () {
-      document.getElementById("mobileMenu")?.classList.add("hidden");
+      setTimeout(() => {
+        document.getElementById("mobileMenu")?.classList.add("hidden");
+      }, 300); //delay
     });
   });
 
