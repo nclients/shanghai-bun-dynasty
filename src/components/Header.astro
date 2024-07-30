@@ -124,7 +124,7 @@ const { content } = Astro.props;
             ""
           )
         }
-         {
+        {
           content?.header?.addOtherBtn ? (
             <PrimaryButton
               content={content}
@@ -144,7 +144,7 @@ const { content } = Astro.props;
             />
           )
         }
-       
+
         {
           content?.header?.addTelBtn && (
             <a
@@ -217,8 +217,8 @@ const { content } = Astro.props;
                 <PrimaryButton
                   content={content}
                   text={
-                    content?.header?.btnInsteadText
-                      ? content?.header?.btnInsteadText
+                    content?.header?.orderOnlineBtnInsteadText
+                      ? content?.header?.orderOnlineBtnInsteadText
                       : "Order Online"
                   }
                   href={`${content?.orderOnlineLink}`}

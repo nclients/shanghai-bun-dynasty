@@ -40,8 +40,8 @@ header:
   menu:
     - { text: "首頁", link: "/zh-cn" }
     - { text: "菜品展示", link: "#" }
-    - { text: "關於我們", link: "/zh-cn/#about-us" }
-    - { text: "聯繫我們", link: "/zh-cn/#contact-us" }
+    - { text: "關於我們", link: "/zh-cn#about-us" }
+    - { text: "聯繫我們", link: "/zh-cn#contact-us" }
     - { text: "English", link: "/" }
   addOrderOnlineBtn: true
   orderOnlineBtnInsteadText: "查看菜單並點餐"
@@ -173,9 +173,9 @@ footer:
   openingHoursInsteadText: "營業時間"
   menu:
     - { text: "首頁", link: "/zh-cn" }
-    - { text: "菜品展示", link: "/zh-cn/gallery" }
-    - { text: "關於我們", link: "https://shanghaibundynasty.com/zh-cn/#about-us" }
-    - { text: "聯繫我們", link: "https://shanghaibundynasty.com/zh-cn/#contact-us" }
+    - { text: "菜品展示", link: "#" }
+    - { text: "關於我們", link: "/zh-cn#about-us" }
+    - { text: "聯繫我們", link: "/zh-cn#contact-us" }
     - { text: "English", link: "/" }
 
   FB: false

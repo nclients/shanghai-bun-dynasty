@@ -162,7 +162,6 @@ footer:
     - { text: "About Us", link: "/#about-us" }
     - { text: "Contact Us", link: "/#contact-us" }
     - { text: "中文", link: "/zh-cn" }
-
   FB: false
   FBLink: ""
   IG: false

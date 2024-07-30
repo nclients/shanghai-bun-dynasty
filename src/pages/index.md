@@ -87,6 +87,18 @@ sections:
     bottomRounded: "3xl" # sm | md | lg | xl | 2xl | 3xl | full
     # bottomInfo: "We offer Takeout"
 
+# Video
+  - type: "video"
+    id: "video"
+    title: 
+      - "Savor the authentic flavors"
+    description: 
+      - "We look forward to welcoming you and sharing a delightful culinary experience together." 
+    videoType: "gjw" # vimeo | gjw | youtube
+    videoId: 
+      - "1gu0f0ji09b38JwBJpaFEvbd51b61c"
+    isOnlyDisplayOnMobile: true
+
 # Gallery  
   - type: "gallery"
     id: ""
@@ -96,8 +108,7 @@ sections:
     bgColor: ""
     bgOpacity: "" # 0~1
     title: 
-      - "Food At Shanghai Bun Dynasty"
-      - "外灘十八號"
+      - "Gallery"
     titleColor: "#000000"
     description: 
       - "emphasizes culinary techniques and the freshness of ingredients"
@@ -176,7 +187,6 @@ footer:
     - { text: "About Us", link: "#about-us" }
     - { text: "Contact Us", link: "#contact-us" }
     - { text: "中文", link: "/zh-cn" }
-
   FB: false
   FBLink: ""
   IG: false

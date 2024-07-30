@@ -89,6 +89,17 @@ sections:
    
     bottomRounded: "3xl" # sm | md | lg | xl | 2xl | 3xl | full
     # bottomInfo: "We offer Takeout"
+# Video
+  - type: "video"
+    id: ""
+    title: 
+      - "品味地道风味"
+    description: 
+      - "期待您的光临，一起享受美食的美好时刻。" 
+    videoType: "gjw" # vimeo | gjw | youtube
+    videoId: 
+      - "1gu0f0ji09b38JwBJpaFEvbd51b61c"
+    isOnlyDisplayOnMobile: true
 
 # Gallery  
   - type: "gallery"
