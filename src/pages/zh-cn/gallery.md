@@ -168,8 +168,10 @@ footer:
   bgColor: "#000000"
   bgOpacity: "0.65" # 0~1
   openingHours: 
-    - "週一 ～ 週五: 10:00 AM - 2:30 PM, 4:30 PM - 9:00 PM"
-    - "週六 ～ 週日: 10:00 AM - 9:00 PM"
+    - "週一 ～ 週五:"
+    - "10:00 AM - 2:30 PM, 4:30 PM - 9:00 PM"
+    - "周六日:"
+    - "10:00 AM - 9:00 PM"
   openingHoursInsteadText: "營業時間"
   menu:
     - { text: "首頁", link: "/zh-cn" }

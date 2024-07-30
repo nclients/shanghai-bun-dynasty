@@ -10,7 +10,7 @@ const { content, section } = Astro.props;
   style="scroll-margin-top: 150px;"
 >
   <div class="absolute top-4 right-4">
-    <div class="flex gap-4">
+    <div class="flex flex-col sm:flex-row gap-4">
       <PrimaryButton
         content={content}
         text={section.getDirectionBtnInsteadText

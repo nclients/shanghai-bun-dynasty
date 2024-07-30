@@ -154,8 +154,10 @@ footer:
   bgColor: "#000000"
   bgOpacity: "0.65" # 0~1
   openingHours: 
-    - "Mon - Fri: 10:00 AM - 2:30 PM, 4:30 PM - 9:00 PM"
-    - "Sat - Sun: 10:00 AM - 9:00 PM"
+    - "Mon - Fri:"
+    - "10:00 AM - 2:30 PM, 4:30 PM - 9:00 PM"
+    - "Sat - Sun:"
+    - "10:00 AM - 9:00 PM"
   menu:
     - { text: "Home", link: "/" }
     - { text: "Gallery", link: "#" }
