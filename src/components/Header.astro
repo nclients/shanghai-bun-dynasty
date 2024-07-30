@@ -263,25 +263,24 @@ const { content } = Astro.props;
           <div class="-my-6 divide-y divide-gray-500/10">
             <div class="space-y-2 py-6">
               {
-                content?.header?.menu &&
-                  content?.header?.menu.map(
-                    (
-                      item: {
-                        link: string | URL | null | undefined;
-                        text: unknown;
-                      },
-                      index: any
-                    ) => (
-                      <Fragment key={index}>
-                        <a
-                          href={item?.link}
-                          class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                        >
-                          {item?.text}
-                        </a>
-                      </Fragment>
-                    )
+                content?.header?.menu?.map(
+                  (
+                    item: {
+                      link: string | URL | null | undefined;
+                      text: unknown;
+                    },
+                    index: any
+                  ) => (
+                    <Fragment key={index}>
+                      <a
+                        href={item?.link}
+                        class="menuItem -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                      >
+                        {item?.text}
+                      </a>
+                    </Fragment>
                   )
+                )
               }
             </div>
           </div>
@@ -300,6 +299,14 @@ const { content } = Astro.props;
 
   document?.getElementById("closeMenu")?.addEventListener("click", function () {
     document?.getElementById("mobileMenu")?.classList.add("hidden");
+  });
+
+  const menuItems = document.querySelectorAll(".menuItem");
+
+  menuItems.forEach((item) => {
+    item.addEventListener("click", function () {
+      document.getElementById("mobileMenu")?.classList.add("hidden");
+    });
   });
 
   document
